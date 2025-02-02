@@ -156,3 +156,20 @@ a {
     gap: 5rem;
   }
  
+
+ /* FAQ Page */
+.QuestionForm {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width:50%;
+    border: 5px solid #62956e95;
+    border-radius: 10%;
+    padding: 3rem;
+}
+
+.InputSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
