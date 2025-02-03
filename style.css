@@ -173,3 +173,27 @@ a {
     flex-direction: column;
     gap: 1rem;
 }
+
+
+ /* Packliste Page */
+table,
+th,
+td {
+  border: thin solid;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #62956e95;
+  text-align: left;
+}
+
+td, th {
+  padding: 10px;
+}
+
+caption {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+  }
