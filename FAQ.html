@@ -9,14 +9,12 @@
 <body class="body">
     <div class="MainContainer">
         <header>
-            <a href="index.html">
-                <h1> Trails & Tails</h1>
-            </a>
+            <a href="index.html" aria-label="Gehe zu Startseite"> <h1> Trails & Tails</h1> </a>
             <nav class="NavBar">
-                <a class="NavItem" href="AboutMe.html">Über mich</a>
-                <a class="NavItem" href="Reiseziele.html">Reiseziele</a>
-                <a class="NavItem" href="Packlisten.html">Packlisten</a>
-                <a class="NavItem" href="FAQ.html">FAQ</a>
+                <a class="NavItem" href="AboutMe.html" aria-label="Gehe zu Über mich-Seite">Über mich</a>
+                <a class="NavItem" href="Reiseziele.html" aria-label="Gehe zu Reiseziele-Seite">Reiseziele</a>
+                <a class="NavItem" href="Packlisten.html" aria-label="Gehe zu Packliste-Seite">Packlisten</a>
+                <a class="NavItem" href="FAQ.html" aria-label="Gehe zu FAQ-Seite">FAQ</a>
             </nav>
         </header>
 
@@ -90,24 +88,24 @@
             <form class ="QuestionForm" action="">
                 <h2>Hast du eine Frage?</h2>   
             <div class="InputSection">
-                <label for="name">Vorname</label>
-                <input type="text" id="name" name="firstname" placeholder="Dein Name..">
+                <label id="Vorname" for="name">Vorname</label>
+                <input type="text" name="firstname" aria-labelledby="Vorname" placeholder="Dein Name..">
             </div>
             <div class="InputSection">
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Email..">
+                <label id="email" for="email">Email</label>
+                <input type="text" name="email" aria-labelledby="email" placeholder="Email..">
             </div>
 
             <div class="InputSection">
-                <label for="consent">Darf ich deine Frage veröffentlichen?</label>
-                <select id="consent" name="consent">
+                <label id="consent" for="consent">Darf ich deine Frage veröffentlichen?</label>
+                <select aria-labelledby="consent" name="consent">
                     <option value="Ja">Ja</option>
                     <option value="Nein">Nein</option>
                 </select>
             </div>
             <div class="InputSection">
-                <label for="message">Nachricht</label>
-                <textarea id="message" name="message" placeholder="Stelle mir deine Frage"></textarea>
+                <label id="Nachricht" for="message">Nachricht</label>
+                <textarea id="message" name="message" aria-labelledby="Nachricht" placeholder="Stelle mir deine Frage"></textarea>
             </div>
             <input type="submit" value="Abschicken" />
 
