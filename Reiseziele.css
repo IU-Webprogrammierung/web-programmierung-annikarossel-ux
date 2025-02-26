@@ -1,0 +1,39 @@
+.card:hover {
+    color: white;
+    background-color: #62956e95;
+  }
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 5px solid #62956e95;
+    border-radius: 10%;
+    text-align: center;
+    padding: 1rem;
+    
+  }
+
+
+
+@media screen and (min-width: 786px) {
+ .card {
+    max-width: 350px;
+    flex: 0 0 33%;
+  }
+}
+
+@media screen and (max-width: 786px) {
+    .card {
+        width: 100%;
+      }
+   
+  .search {
+    width: 100%;
+  }
+
+  }
