@@ -2,21 +2,23 @@
 <html lang="de">
 
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Reiseziele</title>
     <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
 </head>
 
 <body class="body">
     <div class="MainContainer">
         <header>
-            <a href="index.html" aria-label="Gehe zu Startseite">
-                <h1> Trails &amp; Tails</h1>
-            </a>
-            <nav class="NavBar">
+            <nav class="NavBar" id="NavigationBar">
+                <a class="HomePageName" href="index.html" aria-label="Gehe zu Startseite">Trails &amp; Tails </a>
                 <a class="NavItem" href="AboutMe.html" aria-label="Gehe zu Über mich-Seite">Über mich</a>
                 <a class="NavItem" href="Reiseziele.html" aria-label="Gehe zu Reiseziele-Seite">Reiseziele</a>
                 <a class="NavItem" href="Packlisten.html" aria-label="Gehe zu Packliste-Seite">Packlisten</a>
                 <a class="NavItem" href="FAQ.html" aria-label="Gehe zu FAQ-Seite">FAQ</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
             </nav>
         </header>
 
