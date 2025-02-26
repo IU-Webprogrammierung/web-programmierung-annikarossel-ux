@@ -181,19 +181,15 @@ th,
 td {
   border: thin solid;
   border-collapse: collapse;
+  padding: 10px;
+  text-align: left;
 }
 
 th {
   background-color: #62956e95;
-  text-align: left;
-}
-
-td, th {
-  padding: 10px;
 }
 
 caption {
     text-align: left;
-    font-size: 1rem;
     font-weight: bold;
   }
