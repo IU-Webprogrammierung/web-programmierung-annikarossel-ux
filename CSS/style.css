@@ -34,12 +34,36 @@ a {
 
  /* Universale Anweisungen */
 
+ @media screen and (max-width: 786px) {
+  .MainContainer {
+    margin: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+ }
+ 
+ @media screen and (min-width: 787px) and (max-width: 1200px ) {
+  .MainContainer {
+    margin: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+ 
+}
+
+@media screen and ( min-width: 1201px ) {
+  .MainContainer {
+    margin: 2rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+ 
+}
+
+
  /* Background */
 .MainContainer {
     background-color: white;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    padding: 1rem;
     border-radius: 10px;
     display: flex;
     flex-direction: column; 
@@ -192,8 +216,7 @@ a {
 
 
 .NavItem:hover {
-  background-color: #1C5E39;
-  color: white;
+  background-color: #d3e9dd;
 }
 }
 
@@ -213,8 +236,15 @@ a {
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
+  margin-right: 0.5rem;
 }
 
 .NavBar .icon {
   display: none;
+}
+
+/* Fügt dem aktuellen Navigationsitem ein Styling hinzu */
+.NavBar a.current {
+  background-color: #1C5E39;
+  color: white;
 }
