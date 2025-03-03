@@ -43,8 +43,9 @@ a {
     border-radius: 10px;
     display: flex;
     flex-direction: column; 
-    grid-gap:5rem;
+    grid-gap:2rem;
 }
+
 
  /* Anweisungen für Startseite */
 
@@ -138,30 +139,9 @@ a {
 }
 
 
- /* Packliste Page */
-table,
-th,
-td {
-  border: thin solid;
-  border-collapse: collapse;
-  padding: 10px;
-  text-align: left;
-}
-
-th {
-  background-color: #62956e95;
-}
-
-caption {
-    text-align: left;
-    font-weight: bold;
-  }
-
-
-
  /* Navigation Bar */
 
-@media screen and (max-width: 786px) {
+ @media screen and (max-width: 786px) {
   .NavBar a:not(:first-child) {display: none;}
   .NavBar a.icon {
     float: right;
@@ -179,7 +159,44 @@ caption {
     display: block;
     text-align: left;
   }
+
+  .HomePageName {
+    font-size: 24px;
+  }
+
+  .NavItem {
+    font-size: 18px;
+  }
 }
+
+@media screen and (min-width: 786px) {
+  .HomePageName {
+    font-size: 32px;
+  }
+
+  .NavItem {
+    font-size: 18px;
+  }
+
+  header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    
+  }
+  
+  .NavBar {
+    display: flex;
+    align-items: center;
+  }
+
+
+.NavItem:hover {
+  background-color: #1C5E39;
+  color: white;
+}
+}
+
 
 .NavBar {
   width: 100%;
@@ -195,21 +212,9 @@ caption {
   padding: 14px 16px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
   border-radius: 5px;
 }
 
 .NavBar .icon {
   display: none;
-}
-
-.nav {
-  display: flex;
-  justify-content: center;
-}
-
-
-.NavItem:hover {
-  background-color: #1C5E39;
-  color: white;
 }
