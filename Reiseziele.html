@@ -7,7 +7,6 @@
     <title>Reiseziele</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/Reiseziele.css">
-    <script src="javascript.js"></script>
 </head>
 
 <body class="body">
@@ -19,14 +18,14 @@
                 <a class="NavItem" href="Reiseziele.html" aria-label="Gehe zu Reiseziele-Seite">Reiseziele</a>
                 <a class="NavItem" href="Packlisten.html" aria-label="Gehe zu Packliste-Seite">Packlisten</a>
                 <a class="NavItem" href="FAQ.html" aria-label="Gehe zu FAQ-Seite">FAQ</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                <a href="javascript:void(0);" class="icon" onclick="createResponsiveNavigation()">&#9776;</a>
             </nav>
         </header>
 
-        <input class="search" type="text" placeholder="Suche nach Land...">
+        <input class="search" type="text" id="search" placeholder="Suche nach Land...">
 
         <div class="card-container">
-            <a class=" card" href="" aria-label="Gehe zu Costa Rica-Detailseite">
+            <a class="card" href="" aria-label="Gehe zu Costa Rica-Detailseite">
                 <img class="CountryImage" src="Images/CostaRica.jpg" alt="Costa Rica">
                 <h2 class="ListItem">Costa Rica</h2>
                 <p class="beschreibung">Costa Rica habe ich auf einer 3-wöchigen Reise im Oktober 2022 bereist, also
@@ -122,7 +121,7 @@
         </div>
 
     </div>
-
+    <script src="javascript.js"></script>
 </body>
 <footer>
 </footer>
