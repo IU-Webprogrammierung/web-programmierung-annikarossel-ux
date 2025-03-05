@@ -34,11 +34,15 @@
  }
 
  ul {
-  padding: 0;  /* Entfernt Standard Padding */
-  margin: 0;   /* Entfernt Standard Margin */
-}
- /* Universale Anweisungen */
+   padding: 0;
+   /* Entfernt Standard Padding */
+   margin: 0;
+   /* Entfernt Standard Margin */
+ }
 
+
+ /* -------------------------------------------------------------------------- */
+ /* Universale Anweisungen */
  @media screen and (max-width: 786px) {
    .MainContainer {
      margin: 1rem;
@@ -75,7 +79,7 @@
    grid-gap: 2rem;
  }
 
-
+ /* -------------------------------------------------------------------------- */
  /* Anweisungen für Startseite */
  /* Hero Image */
  picture img {
@@ -105,14 +109,7 @@
    }
  }
 
-
-
-
-
-
-
-
- /* --------------------------------------------------------- */
+ /* -------------------------------------------------------------------------- */
  /* 1. Section: Über mich Abschnitt */
  .IntroductionCard img {
    width: 15rem;
@@ -135,8 +132,6 @@
    /* Silbentrennung */
  }
 
-
-
  /* Desktop */
  @media screen and (min-width: 1201px) {
    .IntroductionCard {
@@ -156,80 +151,127 @@
    }
  }
 
-  /* Mobile */
-  @media screen and (max-width: 786px) {
-    .IntroductionCard {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
+ /* Mobile */
+ @media screen and (max-width: 786px) {
+   .IntroductionCard {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: 2rem;
+   }
 
  }
 
-
-
-
-
-
-
-
-
+ /* -------------------------------------------------------------------------- */
  /* 2. Section: Reiseziele Abschnitt */
- .CountryImage {
-   width: 15rem;
-   height: 15rem;
-   border-radius: 50%;
+ /* Linkes Länderbild in Card */
+ .VisitedCountryImage {
+   width: 100%;
+   border-radius: 10px;
  }
 
+ /* Carousel Container */
+ .Carousel {
+   position: relative;
+   margin: auto;
+ }
 
- .CountryCard {
-   text-align: center;
-   background-color: #62956e95;
-   border-radius: 10%;
+ /* Carousel Item */
+ .CarouselItem {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1rem;
+   background-color: #8321ad;
+   border-radius: 10px;
+   color: white;
+ }
+
+ /* Text in Carousel */
+ .DescriptionCountry {
    padding: 1rem;
-   width: 33%;
  }
 
- .ReisezieleCardContainer {
-   display: flex;
-   justify-content: space-between;
-   gap: 3rem;
+ /* Mobile */
+ @media screen and (max-width: 786px) {
+   .CarouselItem {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: 1rem;
+   }
+ }
+
+ /* Next & Previous buttons */
+ .PreviousButton,
+ .NextButton {
+   cursor: pointer;
+   position: absolute;
+   top: 50%;
+   width: auto;
+   margin-top: -22px;
+   padding: 16px;
+   color: white;
+   user-select: none;
+   background-color: #8321ad55;
+ }
+
+ /* Next Button Position*/
+ .NextButton {
+   position: absolute;
+   right: 10px;
+   top: 50%;
+ }
+
+ /* Hover Effekt für Next & Previous button*/
+ .PreviousButton:hover,
+ .NextButton:hover {
+   background-color: rgba(0, 0, 0, 0.8);
  }
 
 
+ /* Punktanzeige */
+ .Dot {
+   cursor: pointer;
+   height: 15px;
+   width: 15px;
+   margin: 0 2px;
+   background-color: #8321ad;
+   border-radius: 50%;
+   display: inline-block;
+ }
+ 
+ /* Aktive Punktanzeige */
+ .active,
+ .Dot:hover {
+   background-color: #8321ad55;
+ }
 
-
-
- /* --------------------------------------------------------- */
+ /* -------------------------------------------------------------------------- */
  /* 3. Section: Packliste und FAQ */
  /* Packlisten */
  .PackingSection li {
-  background-color: #c5e0cc95;
-  border-radius: 10px;
-  padding: 0.25rem 1rem 0.25rem 1rem;
-  margin-bottom: 1rem;
+   background-color: #c5e0cc95;
+   border-radius: 10px;
+   padding: 0.25rem 1rem 0.25rem 1rem;
+   margin-bottom: 1rem;
  }
 
-  /* Desktop und Tablet*/
-  @media screen and (min-width: 787px) {
-    .ThirdSection {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-  }
- 
-   /* Mobile */
-   @media screen and (max-width: 786px) {
-     .ThirdSection {
-       display: grid;
-       grid-template-columns: 1fr;
-       gap: 2rem;
-     }
- 
-  }
- 
- 
+ /* Desktop und Tablet*/
+ @media screen and (min-width: 787px) {
+   .ThirdSection {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 2rem;
+   }
+ }
+
+ /* Mobile */
+ @media screen and (max-width: 786px) {
+   .ThirdSection {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: 2rem;
+   }
+
+ }
 
 
 
@@ -238,8 +280,10 @@
 
 
 
- /* Navigation Bar */
 
+ /* -------------------------------------------------------------------------- */
+ /* Navigationsleiste */
+ /* Mobile */
  @media screen and (max-width: 786px) {
    .NavBar a:not(:first-child) {
      display: none;
@@ -275,7 +319,8 @@
    }
  }
 
- @media screen and (min-width: 786px) {
+ /* Desktop und Tablet*/
+ @media screen and (min-width: 787px) {
    .HomePageName {
      font-size: 32px;
    }
@@ -288,7 +333,6 @@
      display: flex;
      align-items: center;
      justify-content: space-between;
-
    }
 
    .NavBar {
@@ -296,12 +340,10 @@
      align-items: center;
    }
 
-
    .NavItem:hover {
      background-color: #d3e9dd;
    }
  }
-
 
  .NavBar {
    width: 100%;
