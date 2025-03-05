@@ -1,0 +1,86 @@
+ /* Allgemeine Control Anweisungen */
+ input {
+    width: 100%;
+}
+
+/* Kontaktformular*/
+ .QuestionForm {
+     display: flex; /* Flexbox */
+     flex-direction: column; /* Vertikale Anordnung */
+     gap: 2rem; /* Abstand zwischen Elementen */
+     border-radius: 5px;
+     padding: 2rem;
+     background-color: #62956e95;
+ }
+
+/* Einzelne Label/Input Paare in Kontaktformular*/
+ .InputSection {
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+ }
+
+  /* Eingabefelder Kontaktformular */
+.MessageBox,
+.QuestionSelect {
+    border-radius: 25px;
+    padding: 15px;
+}
+
+/* Ausklappbare Fragen/Antworten */
+ details {
+     border: 1px solid #62956e95;
+     border-radius: 5px;
+     padding: 1rem;
+     margin-bottom: 1rem;
+ }
+
+/* Ausgeklappte Fragen/Antworten */
+ details[open] {
+     background-color: #7ab98995;
+ }
+
+/* Linksammlung */
+.LinkItem {
+    background-color: #e1cfe9;
+    padding: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    display: block;          /* Link zu einem Block-Element */
+    width: 100%;
+    margin-top: 1rem;
+    overflow-wrap: break-word; /* Automatisches Umbrechen von zu langen Wörtern */
+    hyphens: auto; /* Silbentrennung */
+}
+
+
+/* Mobile */
+ @media screen and (max-width: 786px) {
+    .Container {
+        padding-bottom: 1rem;
+    }
+ }
+
+ /* Tablet */
+ @media screen and (min-width: 787px) and (max-width: 1200px) {
+    .Container {
+        display: grid; /* Grid Layout */
+        grid-template-columns: 1fr; /* Anzahl Spalten Grid */
+        gap: 3rem; /* Abstand zwischen Grid Elementen */
+        padding-bottom: 2rem;
+    }
+
+    .ContactLinks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+ }
+/* Desktop */
+ @media screen and (min-width: 1201px) {
+    .Container {
+        display: grid;
+        grid-template-columns: 2fr auto;
+        gap: 2rem;
+    }
+ }

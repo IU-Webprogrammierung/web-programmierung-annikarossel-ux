@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAQ</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/FAQ.css">
 </head>
 
 <body class="body">
@@ -20,100 +21,130 @@
                 <a href="javascript:void(0);" class="icon" onclick="createResponsiveNavigation()">&#9776;</a>
             </nav>
         </header>
-
-        <div class="FAQSection">
-            <h2>Frequently Asked Questions</h2>
-            <h3>Reiseplanung &amp; Tipps</h3>
-            <details>
-                <summary>Was hat dich dazu inspiriert, einen Reiseblog zu starten?</summary>
-                <p>Ich habe mich schon in der Schulzeit für das Reisen begeistern können und möchte gerne meine
-                    Erfahrungen und Tips mit anderen Personen teilen.</p>
-            </details>
-            <details>
-                <summary>Wie wählst du deine Reiseziele aus?</summary>
-                <p>Das kommt immer ganz drauf an - manchmal entscheidet meine Reisebegleitung, manchmal kommt es auf die
-                    Reisezeit an. Aktuelle Trends spielen für mich aber auch eine Rolle.</p>
-            </details>
-            <details>
-                <summary>Wie planst du deine Reisen?</summary>
-                <p>Ich markiere mir meist alle Aktivitäten und Orte die ich sehen möchte auf Google Maps und erstelle
-                    eine Word Datei mit einem Ablaufplan.</p>
-            </details>
-            <details>
-                <summary>Was war dein außergewöhnlichstes Reiseerlebnis?</summary>
-                <p>Da ich ein riesiger Schildkrötenliebhaber bin, war für mich das Erlebnis eine Schildkröte beim brüten
-                    in Costa Rica zu sehen, einzigartig.</p>
-            </details>
-            <details>
-                <summary>Hast du eine bevorzugte Art des Reisens?</summary>
-                <p>Ich bevorzuge immer neue Dinge zu erleben und besuche eigentlich keinen Ort zweimal. Vorallem liebe
-                    ich Naturreisen.</p>
-            </details>
-            <h3>Essen &amp; Kultur</h3>
-            <details>
-                <summary>Wie ist deine Ernährweise?</summary>
-                <p>Ich ernähre micht vegetarisch und hatte bisher in keinem Land wirkliche Probleme damit. In einigen Ländern ist es einfacher auf eine spezielle Ernährweise zu achten als in anderen. </p>
-            </details>
-            <details>
-                <summary>Welche Sprachen muss ich können?</summary>
-                <p>Mit Englisch kommt man eigentlich immer gut aus. Ansonsten gibt es ja auch noch diverse Übersetzungsapps. </p>
-            </details>
-            <h3>Technik</h3>
-            <details>
-                <summary>Wie hast du Internet auf Reisen?</summary>
-                <p>Im europäische Ausland kann man den internetvertrag ganz einfach, wie gewohnt weiternutzen. Im außereuropäischen Ausland kaufe ich mir meist vor Ort eine Sim Karte oder nutze eine eSim Karte. </p>
-            </details>
-            <details>
-                <summary>Welche Technik nimmst du mit?</summary>
-                <p>Da ich keine professionellen Fotos mache, reise ich immer mit leichtem Technikgepäck. Genaueres findet ihr in den Reisepacklisten. Allgemein habe ich nur mein Smartphone und eine Powerbank dabei.</p>
-            </details>
-            <h3>Budget &amp; Geld</h3>
-            <details>
-                <summary>Wie findest du günstige Flüge?</summary>
-                <p>bei Flügen schaue ich immer über einen längeren Zeitraum und möglichst früh, wie die Flugpreise sind. Es kann sich auch lohnen, von einem Flughafen weiter entfernt zu fliegen. Ich schaue meist im Umkreis von 300km.</p>
-            </details>
-            <details>
-                <summary>Welche Zahlungsmittel hast du dabei?</summary>
-                <p>Ich habe immer etwas Euro als Bargeld und hebe mir vor Ort an einem Geldautomaten Bargeld ab. Falls eine Karte mal nicht funktioniert ist man dann nicht ganz aufgeschmissen. Ansonsten habe ich eine Kreditkarte immer dabei.</p>
-            </details>
-            <details>
-            <summary>Wie kann ich günstig reisen?</summary>
-            <p>Da ich keinen Luxusurlaub mache, schaue ich immer, dass Unterkünfte nicht über 100€ pro Nacht kosten. Das ist natürlich in manchen Ländern einfacher als in anderen. Allgemein nutze ich einheimische Transportmittel und gehe in kleinere Essensgeschäfte oder versorge mich selbst in meiner Unterkunft.</p>
-        </details>
-            <h3>Sicherheit &amp; Gesundheit</h3>
-            <details>
-                <summary>Welche Impfungen brauche ich?</summary>
-                <p>Ich schaue immer auf der Seite des Auswärtigen Amtes welche Empfehlungen es gibt und mache einen Termin bei Hausärzt:innen oder Tropenmediziner:innen.</p>
-            </details>    
-        </div>
-
-        <div>
-            <form class ="QuestionForm" action="">
-                <h2>Hast du eine Frage?</h2>   
-            <div class="InputSection">
-                <label id="Vorname" for="name">Vorname</label>
-                <input type="text" name="firstname" aria-labelledby="Vorname" placeholder="Dein Name..">
+        <div class="Container">
+            <div class="FAQSection">
+                <h2>Frequently Asked Questions</h2>
+                <h3>Reiseplanung &amp; Tipps</h3>
+                <details>
+                    <summary>Was hat dich dazu inspiriert, einen Reiseblog zu starten?</summary>
+                    <p>Ich habe mich schon in der Schulzeit für das Reisen begeistern können und möchte gerne meine
+                        Erfahrungen und Tips mit anderen Personen teilen.</p>
+                </details>
+                <details>
+                    <summary>Wie wählst du deine Reiseziele aus?</summary>
+                    <p>Das kommt immer ganz drauf an - manchmal entscheidet meine Reisebegleitung, manchmal kommt es auf
+                        die
+                        Reisezeit an. Aktuelle Trends spielen für mich aber auch eine Rolle.</p>
+                </details>
+                <details>
+                    <summary>Wie planst du deine Reisen?</summary>
+                    <p>Ich markiere mir meist alle Aktivitäten und Orte die ich sehen möchte auf Google Maps und
+                        erstelle
+                        eine Word Datei mit einem Ablaufplan.</p>
+                </details>
+                <details>
+                    <summary>Was war dein außergewöhnlichstes Reiseerlebnis?</summary>
+                    <p>Da ich ein riesiger Schildkrötenliebhaber bin, war für mich das Erlebnis eine Schildkröte beim
+                        brüten
+                        in Costa Rica zu sehen, einzigartig.</p>
+                </details>
+                <details>
+                    <summary>Hast du eine bevorzugte Art des Reisens?</summary>
+                    <p>Ich bevorzuge immer neue Dinge zu erleben und besuche eigentlich keinen Ort zweimal. Vorallem
+                        liebe
+                        ich Naturreisen.</p>
+                </details>
+                <h3>Essen &amp; Kultur</h3>
+                <details>
+                    <summary>Wie ist deine Ernährweise?</summary>
+                    <p>Ich ernähre micht vegetarisch und hatte bisher in keinem Land wirkliche Probleme damit. In
+                        einigen Ländern ist es einfacher auf eine spezielle Ernährweise zu achten als in anderen. </p>
+                </details>
+                <details>
+                    <summary>Welche Sprachen muss ich können?</summary>
+                    <p>Mit Englisch kommt man eigentlich immer gut aus. Ansonsten gibt es ja auch noch diverse
+                        Übersetzungsapps. </p>
+                </details>
+                <h3>Technik</h3>
+                <details>
+                    <summary>Wie hast du Internet auf Reisen?</summary>
+                    <p>Im europäische Ausland kann man den internetvertrag ganz einfach, wie gewohnt weiternutzen. Im
+                        außereuropäischen Ausland kaufe ich mir meist vor Ort eine Sim Karte oder nutze eine eSim Karte.
+                    </p>
+                </details>
+                <details>
+                    <summary>Welche Technik nimmst du mit?</summary>
+                    <p>Da ich keine professionellen Fotos mache, reise ich immer mit leichtem Technikgepäck. Genaueres
+                        findet ihr in den Reisepacklisten. Allgemein habe ich nur mein Smartphone und eine Powerbank
+                        dabei.</p>
+                </details>
+                <h3>Budget &amp; Geld</h3>
+                <details>
+                    <summary>Wie findest du günstige Flüge?</summary>
+                    <p>bei Flügen schaue ich immer über einen längeren Zeitraum und möglichst früh, wie die Flugpreise
+                        sind. Es kann sich auch lohnen, von einem Flughafen weiter entfernt zu fliegen. Ich schaue meist
+                        im Umkreis von 300km.</p>
+                </details>
+                <details>
+                    <summary>Welche Zahlungsmittel hast du dabei?</summary>
+                    <p>Ich habe immer etwas Euro als Bargeld und hebe mir vor Ort an einem Geldautomaten Bargeld ab.
+                        Falls eine Karte mal nicht funktioniert ist man dann nicht ganz aufgeschmissen. Ansonsten habe
+                        ich eine Kreditkarte immer dabei.</p>
+                </details>
+                <details>
+                    <summary>Wie kann ich günstig reisen?</summary>
+                    <p>Da ich keinen Luxusurlaub mache, schaue ich immer, dass Unterkünfte nicht über 100€ pro Nacht
+                        kosten. Das ist natürlich in manchen Ländern einfacher als in anderen. Allgemein nutze ich
+                        einheimische Transportmittel und gehe in kleinere Essensgeschäfte oder versorge mich selbst in
+                        meiner Unterkunft.</p>
+                </details>
+                <h3>Sicherheit &amp; Gesundheit</h3>
+                <details>
+                    <summary>Welche Impfungen brauche ich?</summary>
+                    <p>Ich schaue immer auf der Seite des Auswärtigen Amtes welche Empfehlungen es gibt und mache einen
+                        Termin bei Hausärzt:innen oder Tropenmediziner:innen.</p>
+                </details>
             </div>
-            <div class="InputSection">
-                <label id="email" for="email">Email</label>
-                <input type="text" name="email" aria-labelledby="email" placeholder="Email..">
-            </div>
+            <div class="ContactLinks">
+                <div class="contactForm">
+                    <form class="QuestionForm" action="">
+                        <h2>Hast du eine Frage?</h2>
+                        <div class="InputSection">
+                            <label id="Vorname" for="name">Vorname:</label>
+                            <input type="text" name="firstname" aria-labelledby="Vorname" placeholder="Dein Name..">
+                        </div>
+                        <div class="InputSection">
+                            <label id="email" for="email">Email:</label>
+                            <input type="text" name="email" aria-labelledby="email" placeholder="Email..">
+                        </div>
 
-            <div class="InputSection">
-                <label id="consent" for="consent">Darf ich deine Frage veröffentlichen?</label>
-                <select aria-labelledby="consent" name="consent">
-                    <option value="Ja">Ja</option>
-                    <option value="Nein">Nein</option>
-                </select>
-            </div>
-            <div class="InputSection">
-                <label id="Nachricht" for="message">Nachricht</label>
-                <textarea id="message" name="message" aria-labelledby="Nachricht" placeholder="Stelle mir deine Frage"></textarea>
-            </div>
-            <input type="submit" value="Abschicken" />
+                        <div class="InputSection">
+                            <label id="consent" for="consent">Darf ich deine Frage veröffentlichen?</label>
+                            <select class="QuestionSelect" aria-labelledby="consent" name="consent">
+                                <option value="Ja">Ja</option>
+                                <option value="Nein">Nein</option>
+                            </select>
+                        </div>
+                        <div class="InputSection">
+                            <label id="Nachricht" for="message">Nachricht:</label>
+                            <textarea class="MessageBox" id="message" name="message" aria-labelledby="Nachricht"
+                                placeholder="Stelle mir deine Frage"></textarea>
+                        </div>
+                        <input type="submit" value="Abschicken" />
 
-            </form>
+                    </form>
+                </div>
 
+                <div class="LinkCollection">
+                    <h2>Linksammlung</h2>
+                    <a class="LinkItem" href="https://www.auswaertiges-amt.de/" aria-label="Gehe zu Auswärtiges Amt">&#x1F3E2; Auswärtiges Amt</a>
+                    <a class="LinkItem" href="https://www.check24.de/" aria-label="Gehe zu Check24">&#x2708; Flugsuche</a>
+                    <a class="LinkItem" href="https://www.booking.com/" aria-label="Gehe zu booking.com">&#x1F3E8; Unterkunftssuche</a>
+                    <a class="LinkItem" href="https://www.who.int/" aria-label="Gehe zu who">&#x1F3E5; Gesundheitsinformationen</a>
+                    <a class="LinkItem" href="https://www.rome2rio.com/" aria-label="Gehe zu Rome2Rio">&#x1F686; Verkehrsmittel</a>
+                    <a class="LinkItem" href="https://www.oanda.com/" aria-label="Gehe zu oanda.com">&#x1F4B5; Währungsrechner</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
