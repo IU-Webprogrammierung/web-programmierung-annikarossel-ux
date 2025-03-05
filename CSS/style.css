@@ -1,218 +1,232 @@
  /* Allgemeine Control Anweisungen */
 
  body {
-    font-family: Verdana, sans-serif;
-    background-color:#7ab98995;
-}
+   font-family: Verdana, sans-serif;
+   background-color: #7ab98995;
+ }
 
-* {
-  box-sizing: border-box;
-}
+ * {
+   box-sizing: border-box;
+ }
 
-input {
-    border-radius: 25px;
-    padding: 15px;
-    width: 70%;
-  }
+ input {
+   border-radius: 25px;
+   padding: 15px;
+   width: 70%;
+ }
 
 
-header {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    color: #1C5E39;;
-}
+ header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: #1C5E39;
+   ;
+ }
 
-li {
-    list-style-type: none;
-}
+ li {
+   list-style-type: none;
+ }
 
-a {
-    text-decoration: none;
-    color: inherit;
-  }
+ a {
+   text-decoration: none;
+   color: inherit;
+ }
 
  /* Universale Anweisungen */
 
  @media screen and (max-width: 786px) {
-  .MainContainer {
-    margin: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
+   .MainContainer {
+     margin: 1rem;
+     padding-left: 1rem;
+     padding-right: 1rem;
+   }
  }
- 
- @media screen and (min-width: 787px) and (max-width: 1200px ) {
-  .MainContainer {
-    margin: 2rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-}
- 
-}
 
-@media screen and ( min-width: 1201px ) {
-  .MainContainer {
-    margin: 2rem;
-    padding-left: 7rem;
-    padding-right: 7rem;
-}
- 
-}
+ @media screen and (min-width: 787px) and (max-width: 1200px) {
+   .MainContainer {
+     margin: 2rem;
+     padding-left: 3rem;
+     padding-right: 3rem;
+   }
+
+ }
+
+ @media screen and (min-width: 1201px) {
+   .MainContainer {
+     margin: 2rem;
+     padding-left: 7rem;
+     padding-right: 7rem;
+   }
+
+ }
 
 
  /* Background */
-.MainContainer {
-    background-color: white;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column; 
-    grid-gap:2rem;
-}
+ .MainContainer {
+   background-color: white;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   grid-gap: 2rem;
+ }
 
 
  /* Anweisungen für Startseite */
-  /* Hero Image */
-.HeroImage {
-    width: 100%;
-    opacity: 0.8;
-}
+ /* Hero Image */
+ picture img {
+   width: 100%;
+   opacity: 0.8;
+   border-radius:10px;
+ }
 
-.HeroImageContainer {
-    position: relative;
-    text-align:center;
-}
+ .HeroImageContainer {
+   position: relative;
+   text-align: center;
+ }
 
-.HeroImageContainer h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.766);
-    padding: 2rem;
-    border-radius: 10px;
+ .HeroImageContainer h3 {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: rgba(255, 255, 255, 0.766);
+   padding: 2rem;
+   border-radius: 10px;
+ }
+
+ @media screen and (max-width: 786px) {
+  .HeroImageContainer h3 {
+    padding: 1rem;
   }
+}
+
+
 
  /* Über mich Abschnitt */
-  .IntroductionCard {
-    display:flex;
-  }
+ .IntroductionCard {
+   display: flex;
+ }
 
-.IntroductionCard img {
-    width:20%;
-    border-radius:50%;
-    margin-right:5rem;
-}
+ .IntroductionCard img {
+   width: 20%;
+   border-radius: 50%;
+   margin-right: 5rem;
+ }
 
 
 
  /* Reiseziele Abschnitt */
-  .CountryImage {
-    width: 15rem;
-    height: 15rem; 
-    border-radius: 50%;
-  }
- 
+ .CountryImage {
+   width: 15rem;
+   height: 15rem;
+   border-radius: 50%;
+ }
 
-.CountryCard {
-    text-align: center;
-    background-color: #62956e95;
-    border-radius:10%;
-    padding: 1rem;
-    width: 33%;
-}
 
-.ReisezieleCardContainer {
-    display: flex;
-    justify-content: space-between;
-    gap:3rem;
-}
+ .CountryCard {
+   text-align: center;
+   background-color: #62956e95;
+   border-radius: 10%;
+   padding: 1rem;
+   width: 33%;
+ }
+
+ .ReisezieleCardContainer {
+   display: flex;
+   justify-content: space-between;
+   gap: 3rem;
+ }
 
  /* Navigation Bar */
 
  @media screen and (max-width: 786px) {
-  .NavBar a:not(:first-child) {display: none;}
-  .NavBar a.icon {
-    float: right;
-    display: block;
-  }
+   .NavBar a:not(:first-child) {
+     display: none;
+   }
 
-  .NavBar.responsive {
-    position: relative;
-  }
-  
-  .NavBar.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .NavBar.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+   .NavBar a.icon {
+     float: right;
+     display: block;
+   }
 
-  .HomePageName {
-    font-size: 24px;
-  }
+   .NavBar.responsive {
+     position: relative;
+   }
 
-  .NavItem {
-    font-size: 18px;
-  }
-}
+   .NavBar.responsive .icon {
+     position: absolute;
+     right: 0;
+     top: 0;
+   }
 
-@media screen and (min-width: 786px) {
-  .HomePageName {
-    font-size: 32px;
-  }
+   .NavBar.responsive a {
+     float: none;
+     display: block;
+     text-align: left;
+   }
 
-  .NavItem {
-    font-size: 18px;
-  }
+   .HomePageName {
+     font-size: 24px;
+   }
 
-  header {
-    display: flex;
-    align-items: center; 
-    justify-content: space-between; 
-    
-  }
-  
-  .NavBar {
-    display: flex;
-    align-items: center;
-  }
+   .NavItem {
+     font-size: 18px;
+   }
+ }
 
+ @media screen and (min-width: 786px) {
+   .HomePageName {
+     font-size: 32px;
+   }
 
-.NavItem:hover {
-  background-color: #d3e9dd;
-}
-}
+   .NavItem {
+     font-size: 18px;
+   }
+
+   header {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+
+   }
+
+   .NavBar {
+     display: flex;
+     align-items: center;
+   }
 
 
-.NavBar {
-  width: 100%;
-  overflow: hidden;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
+   .NavItem:hover {
+     background-color: #d3e9dd;
+   }
+ }
 
-.NavBar a {
-  float: left;
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-right: 0.5rem;
-}
 
-.NavBar .icon {
-  display: none;
-}
+ .NavBar {
+   width: 100%;
+   overflow: hidden;
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+ }
 
-/* Fügt dem aktuellen Navigationsitem ein Styling hinzu */
-.NavBar a.current {
-  background-color: #1C5E39;
-  color: white;
-}
+ .NavBar a {
+   float: left;
+   display: block;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-weight: bold;
+   border-radius: 5px;
+   margin-right: 0.5rem;
+ }
+
+ .NavBar .icon {
+   display: none;
+ }
+
+ /* Fügt dem aktuellen Navigationsitem ein Styling hinzu */
+ .NavBar a.current {
+   background-color: #1C5E39;
+   color: white;
+ }
