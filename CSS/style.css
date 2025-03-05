@@ -72,7 +72,6 @@ a {
 
 
  /* Anweisungen für Startseite */
-
   /* Hero Image */
 .HeroImage {
     width: 100%;
@@ -94,7 +93,7 @@ a {
     border-radius: 10px;
   }
 
- /* Über mich Section */
+ /* Über mich Abschnitt */
   .IntroductionCard {
     display:flex;
   }
@@ -108,15 +107,12 @@ a {
 
 
  /* Reiseziele Abschnitt */
-
   .CountryImage {
     width: 15rem;
     height: 15rem; 
     border-radius: 50%;
   }
  
-
-
 .CountryCard {
     text-align: center;
     background-color: #62956e95;
@@ -131,21 +127,7 @@ a {
     gap:3rem;
 }
 
-
-
- /* About Me Page */
-
- .Button {
-    background-color: #1C5E39;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-}
-
  /* Navigation Bar */
-
  @media screen and (max-width: 786px) {
   .NavBar a:not(:first-child) {display: none;}
   .NavBar a.icon {

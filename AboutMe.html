@@ -6,72 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Über mich</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/AboutMe.css">
 </head>
 
 <body class="body">
     <div class="MainContainer">
-        <div class="FirstSection">
-            <header>
-                <nav class="NavBar" id="NavigationBar">
-                    <a class="HomePageName" href="index.html" aria-label="Gehe zu Startseite">Trails &amp; Tails </a>
-                    <a class="NavItem current" href="AboutMe.html" aria-label="Gehe zu Über mich-Seite">Über mich</a>
-                    <a class="NavItem" href="Reiseziele.html" aria-label="Gehe zu Reiseziele-Seite">Reiseziele</a>
-                    <a class="NavItem" href="Packlisten.html" aria-label="Gehe zu Packliste-Seite">Packlisten</a>
-                    <a class="NavItem" href="FAQ.html" aria-label="Gehe zu FAQ-Seite">FAQ</a>
-                    <a href="javascript:void(0);" class="icon" onclick="createResponsiveNavigation()">&#9776;</a>
-                </nav>
-            </header>
+        <header>
+            <nav class="NavBar" id="NavigationBar">
+                <a class="HomePageName" href="index.html" aria-label="Gehe zu Startseite">Trails &amp; Tails </a>
+                <a class="NavItem current" href="AboutMe.html" aria-label="Gehe zu Über mich-Seite">Über mich</a>
+                <a class="NavItem" href="Reiseziele.html" aria-label="Gehe zu Reiseziele-Seite">Reiseziele</a>
+                <a class="NavItem" href="Packlisten.html" aria-label="Gehe zu Packliste-Seite">Packlisten</a>
+                <a class="NavItem" href="FAQ.html" aria-label="Gehe zu FAQ-Seite">FAQ</a>
+                <a href="javascript:void(0);" class="icon" onclick="createResponsiveNavigation()">&#9776;</a>
+            </nav>
+        </header>
 
-            <h2>Willkommen auf meiner Reise!</h2>
-            <div class="IntroductionCard">
-                <img class="ProfileImage" src="Images/Profile.jpeg" alt="Profilbild">
-                <div>
-                    <h3>Über mich</h3>
-                    <p>Ich bin Annika, User Experience Designerin in einer Softwarefirma und Studentin - und dennoch
-                        ständig unterwegs. Ob exotische Abenteuer in ferne Länder oder Kurztrips am Wochenende, ich bin
-                        bei
-                        jeder Reise dabei. Ich zeige euch wie es möglich ist die Welt zu entdecken ohne Vollzeitreisende
-                        sein zu müssen.</p>
+        <div class="IntroductionContent">
+            <div class="AboutMeInformation">
+                <h2>Willkommen auf meiner Reise!</h2>
+                <div class="IntroCard">
+                    <img class="ImageCard" src="Images/Profile.jpeg" alt="Profilbild">
+                    <div>
+                        <h3>Über mich</h3>
+                        <p>Ich bin Annika, User Experience Designerin in einer Softwarefirma und Studentin - und dennoch
+                            ständig unterwegs. Ob exotische Abenteuer in ferne Länder oder Kurztrips am Wochenende, ich
+                            bin
+                            bei
+                            jeder Reise dabei. Ich zeige euch wie es möglich ist die Welt zu entdecken ohne
+                            Vollzeitreisende
+                            sein zu müssen.</p>
+                    </div>
+                </div>
+
+                <div class="IntroCardSpecial">
+                    <div>
+                        <h3>Ziele des Blogs</h3>
+                        <p>Ich möchte vorallem mit dem Blog andere Menschen inspirieren und motivieren und die Hürde des
+                            Planens einer größeren Reise verringern. Da ich selbst sehr gerne mich auf anderen Blogs
+                            inspiriere, möchte ich auch hier alle meine Erfahrungen und Tips mit anderen Teilen. </p>
+                    </div>
+                    <img class="ImageCard" src="Images/InspirationBlog.jpg" alt="PC mit Reisewebseite">
+                </div>
+
+                <div class="IntroCard">
+                    <img class="ImageCard" src="Images/Töpfern.jpg" alt="Töpferutensilien">
+                    <div>
+                        <h3>Hobbies</h3>
+                        <p>Neben dem Reisen gehe ich gerne spazieren und kümmere mich um meinen Hund, Toni. Außerdem
+                            gehe
+                            ich gerne in die Stadt und genieße das Großstadtleben. Lesen und Sport machen gehören auch
+                            zu
+                            meinen Hobbies. Außerdem probiere ich gerne neue kreative Hobbies, wie z.B. Töpfern oder
+                            Malen
+                            aus.</p>
+                    </div>
                 </div>
             </div>
 
-
-            <div class="IntroductionCard">
-                <div>
-                    <h3>Ziele des Blogs</h3>
-                    <p>Ich möchte vorallem mit dem Blog andere Menschen inspirieren und motivieren und die Hürde des
-                        Planens einer größeren Reise verringern. Da ich selbst sehr gerne mich auf anderen Blogs
-                        inspiriere, möchte ich auch hier alle meine Erfahrungen und Tips mit anderen Teilen. </p>
+            <div class="ActivityChannels">
+                <div class="CurrentLocation">
+                    <h3>Aktuelles</h3>
+                    <p>Wo ich gerade bin: Vancouver</p>
+                    <iframe class="EmbeddedMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41663.71450782063!2d-123.16518906485625!3d49.25778411356313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673f143a94fb3%3A0xbb9196ea9b81f38b!2sVancouver%2C%20Britisch-Kolumbien%2C%20Kanada!5e0!3m2!1sde!2sde!4v1741179431112!5m2!1sde!2sde"></iframe>
+                    <label for="TravelDuration">Reisedauer:</label>
+                    <meter class="DisplayTravelDuration" id="TravelDuration" value="8" min="0" max="20" aria-label="Reisedauer: 8 von 20 Tagen">8 von
+                        20 Tagen</meter>
+                    <p>Letzte Aktualisierung:</p>
+                    <p id="LastSave"></p>
                 </div>
-                <img class="ProfileImage" src="Images/InspirationBlog.jpg" alt="PC mit Reisewebseite">
-            </div>
-
-            <div class="IntroductionCard">
-                <img class="ProfileImage" src="Images/Töpfern.jpg" alt="Töpferutensilien">
-                <div>
-                    <h3>Hobbies</h3>
-                    <p>Neben dem Reisen gehe ich gerne spazieren und kümmere mich um meinen Hund, Toni. Außerdem gehe
-                        ich gerne in die Stadt und genieße das Großstadtleben. Lesen und Sport machen gehören auch zu
-                        meinen Hobbies. Außerdem probiere ich gerne neue kreative Hobbies, wie z.B. Töpfern oder Malen
-                        aus.</p>
-                </div>
-            </div>
-
-            <div>
-                <h3>Verfolge mich auf all meinen Kanälen</h3>
                 <div class="SocialMediaBar">
-                    <a class="Button" href="https://www.instagram.com/" aria-label="Gehe zu Instagram">Instagram</a>
-                    <a class="Button" href="https://www.youtube.com/" aria-label="Gehe zu YouTube">Youtube</a>
-                    <a class="Button" href="https://www.facebook.com/" aria-label="Gehe zu Facebook">Facebook</a>
-                    <a class="Button" href="https://www.linkedin.com/" aria-label="Gehe zu LinkedIn">LinkedIn</a>
-                    <a class="Button" href="https://www.pinterest.com/" aria-label="Gehe zu Pinterest">Pinterest</a>
-                    <a class="Button" href="https://www.tiktok.com/" aria-label="Gehe zu TikTok">Tiktok</a>
+                    <h3>Folge mir hier</h3>
+                    <a class="SocialMediaLink" href="https://www.instagram.com/" aria-label="Gehe zu Instagram">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a class="SocialMediaLink" href="https://www.youtube.com/" aria-label="Gehe zu YouTube">
+                        <i class="fa fa-youtube"></i>
+                    </a>
+                    <a class="SocialMediaLink" href="https://www.facebook.com/" aria-label="Gehe zu Facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="SocialMediaLink" href="https://www.linkedin.com/" aria-label="Gehe zu LinkedIn">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a class="SocialMediaLink" href="https://www.pinterest.com/" aria-label="Gehe zu Pinterest">
+                        <i class="fa fa-pinterest"></i>
+                    </a>
+                    <a class="SocialMediaLink" href="https://www.tiktok.com/" aria-label="Gehe zu X">
+                        <i class="fa fa-twitter"></i>
+                    </a>
                 </div>
             </div>
         </div>
-
     </div>
-
+    <script src="javascript.js"></script>
 </body>
 <footer>
 </footer>

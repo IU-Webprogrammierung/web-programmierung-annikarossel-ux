@@ -1,3 +1,9 @@
+// Abrufen der letzten Speicherung der Seite
+const LastSaveElement = document.getElementById("LastSave"); // Element mit id speichern
+const lastDate = new Date(document.lastModified); // Datum der letzten Speicherung
+const formattingDate = lastDate.toLocaleDateString(); // Datum ohne Uhrzeit
+LastSave.innerText = formattingDate; // Fügt dem p Element das Datum hinzu
+
 
 // Fügt dem Klassenname das Attribut responsive hinzu
 function createResponsiveNavigation() {
