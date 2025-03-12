@@ -80,3 +80,18 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "grid";
   dots[slideIndex-1].className += " active";
 }
+
+
+// Öffne Einstellungsmenü bei Klick auf Button
+const SettingsMenu = document.getElementById("SettingsMenu");
+const SettingsButton = document.getElementById("Settings");
+document.getElementById("Settings").addEventListener("click", function () {
+  SettingsMenu.classList.toggle("visible");
+});
+
+// Schließt das Menü, wenn man außerhalb klickt
+  document.addEventListener("click", function (event) {
+      if (!SettingsButton.contains(event.target) && !SettingsMenu.contains(event.target)) {
+        SettingsMenu.classList.remove("visible");
+      }
+  });

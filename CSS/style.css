@@ -372,3 +372,107 @@
    background-color: #1C5E39;
    color: white;
  }
+
+
+
+
+
+/* Einstellungs Button */
+ .SettingsButton {
+  font-weight: bold;
+  color: #1C5E39;
+  background-color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer; /* Fügt Hover Effekt hinzu */
+}
+
+/* Positionierung Settings Popup */
+.SettingsContainer {
+  position: relative;  /* Relative Positionierung Menü zu Settinngs Button*/
+}
+
+/* Settings Popup */
+#SettingsMenu {
+  display: none; /* Standardmäßig versteckt */
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: absolute;/* Standardmäßig versteck */
+  top: 100%; /* Positionierung: direkt unter dem Button */
+  left: 50%; /* Positionierung: Zentriert das Menü relativ zum Button */
+  transform: translateX(-50%); /* Korrigiert die Zentrierung */
+  z-index: 1000;
+  width: 150px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Wenn das Menü sichtbar ist */
+#SettingsMenu.visible {
+  display: block;
+}
+
+/* Positionierung Settingsitems innerhalb Menu */
+.SwitchPosition {
+  padding-top: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+
+/* Switch*/
+/* Größe + Positionierung Switch*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Standard HTML Checkbox wird auf unsichtbar gesetzt */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider */
+.Slider {
+  position: absolute;
+  cursor: pointer; /* Zeigt an, dass Switch klickbar ist */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d3e9dd;
+  -webkit-transition: .4s; /* Übergangseffekt */
+  transition: .4s;
+  border-radius: 34px;
+}
+
+/* Kreis im Slider */
+.Slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+/* Bei Klick: Änderung Hintergrundfarbe */
+input:checked + .Slider {
+  background-color: #1C5E39;
+}
+
+/* Bewegung des Kreis im Slider */
+input:checked + .Slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
