@@ -414,7 +414,7 @@
 }
 
 /* Positionierung Settingsitems innerhalb Menu */
-.SwitchPosition {
+.SwitchPosition, .SettingsPosition {
   padding-top: 10px;
   padding-top: 10px;
   padding-left: 10px;

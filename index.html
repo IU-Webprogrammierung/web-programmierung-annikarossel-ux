@@ -7,6 +7,7 @@
     <title>Trails &amp; Tails</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/FAQ.css">
+    <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.3/i18next.min.js"></script>
 </head>
 
 <body class="body">
@@ -14,10 +15,10 @@
         <header>
             <nav class="NavBar" id="NavigationBar">
                 <a class="HomePageName" href="index.html" aria-label="Gehe zu Startseite">Trails &amp; Tails </a>
-                <a class="NavItem" href="AboutMe.html" aria-label="Gehe zu Über mich-Seite">Über mich</a>
-                <a class="NavItem" href="Reiseziele.html" aria-label="Gehe zu Reiseziele-Seite">Reiseziele</a>
-                <a class="NavItem" href="Packlisten.html" aria-label="Gehe zu Packliste-Seite">Packlisten</a>
-                <a class="NavItem" href="FAQ.html" aria-label="Gehe zu FAQ-Seite">FAQ</a>
+                <a class="NavItem" href="AboutMe.html" aria-label="Gehe zu Über mich-Seite" data-i18n="ÜberMich"></a>
+                <a class="NavItem" href="Reiseziele.html" aria-label="Gehe zu Reiseziele-Seite" data-i18n="Reiseziele"></a>
+                <a class="NavItem" href="Packlisten.html" aria-label="Gehe zu Packliste-Seite" data-i18n="Packlisten"></a>
+                <a class="NavItem" href="FAQ.html" aria-label="Gehe zu FAQ-Seite" data-i18n="FAQ"></a>
                 <a href="javascript:void(0);" class="icon" onclick="createResponsiveNavigation()">&#9776;</a>
             </nav>
 
@@ -28,13 +29,20 @@
                 </button>
                 <div id="SettingsMenu" class="HideMenu">
                     <div class="SwitchPosition">
-                        <label for="switch">Dark Mode:</label>
+                        <label for="switch" data-i18n="DarkMode"></label>
                         <label class="switch">
                             <input type="checkbox" id="DarkModeToggle">
                             <span class="Slider"></span>
                         </label>
                     </div>
-           
+                    <div class="SettingsPosition">
+                        <label for="LanguageSelect" data-i18n="Sprache"></label>
+                        <select id="LanguageSelect">
+                            <option value="de" data-i18n="Deutsch"></option>
+                            <option value="en" data-i18n="Englisch"></option>
+                        </select>
+                    </div>
+                </div>
 
 
 
@@ -47,36 +55,28 @@
                 <source srcset="Images/HeroImageTablet.jpg" media="(min-width: 787px) and (max-width: 1200px)">
                 <source srcset="Images/HeroImageDesktop.jpg" media="(min-width: 1201px)">
                 <img src="Images/HeroImageDesktop.jpg" alt="Person blickt über Landschaft">
-                <h3>Entdecke die Welt!</h3>
+                <h3 data-i18n="EntdeckeWelt"></h3>
             </picture>
         </div>
 
         <div class="FirstSection">
             <a href="AboutMe.html" aria-label="Gehe zu Über mich-Seite">
-                <h2>Über mich &#8594;</h2>
+                <h2 data-i18n="ÜberMichNavigation"></h2>
             </a>
             <div class="IntroductionCard">
                 <img class="ProfileImage" src="Images/Profile.jpeg" alt="Profilbild">
 
                 <div class="WelcomeText">
-                    <h3>Willkommen auf meiner Reise!</h3>
-                    <p>Ich bin Annika, User Experience Designerin in einer Softwarefirma und Studentin - und dennoch
-                        ständig
-                        unterwegs. Ob exotische Abenteuer in ferne Länder oder Kurztrips am Wochenende, ich bin bei
-                        jeder Reise
-                        dabei. Ich zeige euch wie es möglich ist die Welt zu entdecken ohne Vollzeitreisende sein zu
-                        müssen.</p>
+                    <h3 data-i18n="WillkommenText"></h3>
+                    <p data-i18n="ÜberMichBeschreibung"></p>
                 </div>
 
                 <div class="News">
                     <h3>Neuigkeiten</h3>
-                    <a class="NewsLink" href="Reiseziele.html" aria-label="Gehe zu Reiseziele-Seite">&#x1F305; Namibia
-                        Reiseupdate</a>
-                    <a class="NewsLink" href="Packlisten.html" aria-label="Gehe zu Packliste-Seite">&#x1F4CB; Spezielle
-                        Packlisten</a>
-                    <a class="NewsLink" href="AboutMe.html" aria-label="Gehe zu Über mich-Seite">&#x1F4F1; Update Social
-                        Media</a>
-                    <a class="NewsLink" href="FAQ.html" aria-label="Gehe zu FAQ-Seite">&#x2049; Neuer FAQ Bereich</a>
+                    <a class="NewsLink" href="Reiseziele.html" aria-label="Gehe zu Reiseziele-Seite" data-i18n="NewsLink1"></a>
+                    <a class="NewsLink" href="Packlisten.html" aria-label="Gehe zu Packliste-Seite" data-i18n="NewsLink2"></a>
+                    <a class="NewsLink" href="AboutMe.html" aria-label="Gehe zu Über mich-Seite" data-i18n="NewsLink3"></a>
+                    <a class="NewsLink" href="FAQ.html" aria-label="Gehe zu FAQ-Seite" data-i18n="NewsLink4"></a>
                 </div>
 
             </div>
@@ -87,41 +87,32 @@
                 <div class="CarouselItem">
                     <img class="VisitedCountryImage" src="Images/CostaRicaBreitbild.jpg">
                     <div class="DescriptionCountry">
-                        <h3 class="CountryName">Costa Rica</h3>
-                        <p class="beschreibung">Costa Rica habe ich auf einer 3-wöchigen Reise im Oktober 2022 bereist,
-                            also
-                            mitten in der Regenzeit.</p>
+                        <h3 class="CountryName" data-i18n="CostaRica"></h3>
+                        <p class="beschreibung" data-i18n="CostaRicaBeschreibung"></p>
                     </div>
                 </div>
 
                 <div class="CarouselItem">
                     <img class="VisitedCountryImage" src="Images/NiederlandeBreitbild.jpg">
                     <div class="DescriptionCountry">
-                        <h3 class="CountryName">Niederlande</h3>
-                        <p class="beschreibung">Malerische Grachten, wunderschöne Architektur und faszinierende
-                            Geschichte - das
-                            alles kann man ganz einfach in Amsterdam eleben.</p>
+                        <h3 class="CountryName" data-i18n="Niederlande"></h3>
+                        <p class="beschreibung" data-i18n="NiederlandeBeschreibung"></p>
                     </div>
                 </div>
 
                 <div class="CarouselItem">
                     <img class="VisitedCountryImage" src="Images/IslandBreitbild.jpg">
                     <div class="DescriptionCountry">
-                        <h3 class="CountryName">Island</h3>
-                        <p class="beschreibung">Island ist ein Land voller Kontraste - Feuer und Eis, rau und
-                            wunderschön
-                            zugleich - Ein
-                            richtiges Abenteuer!</p>
+                        <h3 class="CountryName" data-i18n="Island"></h3>
+                        <p class="beschreibung" data-i18n="IslandBeschreibung"></p>
                     </div>
                 </div>
 
                 <div class="CarouselItem">
                     <img class="VisitedCountryImage" src="Images/KambodschaBreitbild.jpg">
                     <div class="DescriptionCountry">
-                        <h3 class="CountryName">Kambodscha</h3>
-                        <p class="beschreibung">2022 habe ich hier die Tempelanlage Angkor Wat besucht - ein
-                            atemberaubendes
-                            Erlebnis.</p>
+                        <h3 class="CountryName" data-i18n="Kambodscha"></h3>
+                        <p class="beschreibung" data-i18n="KambodschaBeschreibung"></p>
                     </div>
                 </div>
 
@@ -144,25 +135,20 @@
         <div class="ThirdSection">
             <div class="PackingSection">
                 <a href="Packlisten.html" aria-label="Gehe zu Packliste-Seite">
-                    <h2>Packlisten &#8594;</h2>
+                    <h2 data-i18n="PacklisteIcon"></h2>
                 </a>
                 <ul>
                     <li>
-                        <h3>Allgemeine Packliste</h3>
-                        <p>Eine gute Packliste sorgt dafür, dass nichts Wichtiges vergessen wird. Von Kleidung über
-                            Hygieneartikel bis hin zu Technik.</p>
+                        <h3 data-i18n="AllgemeinePackliste"></h3>
+                        <p data-i18n="Allgemeine PacklisteBeschreibung"></p>
                     </li>
                     <li>
-                        <h3>Camping Packliste</h3>
-                        <p>Zelt, Schlafsack, Kochausrüstung und wetterfeste Kleidung sind essenziell für einen
-                            gelungenen
-                            Trip in die Natur.</p>
+                        <h3 data-i18n="CampingPackliste">Camping Packliste</h3>
+                        <p data-i18n="CampingPacklisteBeschreibung"></p>
                     </li>
                     <li>
-                        <h3>Packliste für kalte Ziele</h3>
-                        <p>Für Reisen in kalte Regionen sind warme Kleidung, isolierende Schuhe und wetterfeste
-                            Ausrüstung
-                            essenziell. Schichtenprinzip, Handschuhe und Thermosflasche sorgen für Komfort und Wärme.
+                        <h3 data-i18n="KaltePackliste"></h3>
+                        <p data-i18n="KaltePacklisteBeschreibung">
                         </p>
                     </li>
 
@@ -171,36 +157,27 @@
 
             <div class="FAQSection">
                 <a href="FAQ.html" aria-label="Gehe zu FAQ-Seite">
-                    <h2>FAQ &#8594;</h2>
+                    <h2 data-i18n="FAQIcon"></h2>
                 </a>
                 <details>
-                    <summary>Was hat dich dazu inspiriert, einen Reiseblog zu starten?</summary>
-                    <p>Ich habe mich schon in der Schulzeit für das Reisen begeistern können und möchte gerne meine
-                        Erfahrungen und Tips mit anderen Personen teilen.</p>
+                    <summary data-i18n="Frage1"></summary>
+                    <p data-i18n="Antwort1"></p>
                 </details>
                 <details>
-                    <summary>Wie wählst du deine Reiseziele aus?</summary>
-                    <p>Das kommt immer ganz drauf an - manchmal entscheidet meine Reisebegleitung, manchmal kommt es auf
-                        die
-                        Reisezeit an. Aktuelle Trends spielen für mich aber auch eine Rolle.</p>
+                    <summary data-i18n="Frage2"></summary>
+                    <p data-i18n="Antwort2"></p>
                 </details>
                 <details>
-                    <summary>Wie planst du deine Reisen?</summary>
-                    <p>Ich markiere mir meist alle Aktivitäten und Orte die ich sehen möchte auf Google Maps und
-                        erstelle
-                        eine Word Datei mit einem Ablaufplan.</p>
+                    <summary data-i18n="Frage3"></summary>
+                    <p data-i18n="Antwort3"></p>
                 </details>
                 <details>
-                    <summary>Was war dein außergewöhnlichstes Reiseerlebnis?</summary>
-                    <p>Da ich ein riesiger Schildkrötenliebhaber bin, war für mich das Erlebnis eine Schildkröte beim
-                        brüten
-                        in Costa Rica zu sehen, einzigartig.</p>
+                    <summary data-i18n="Frage4"></summary>
+                    <p data-i18n="Antwort4"></p>
                 </details>
                 <details>
-                    <summary>Hast du eine bevorzugte Art des Reisens?</summary>
-                    <p>Ich bevorzuge immer neue Dinge zu erleben und besuche eigentlich keinen Ort zweimal. Vorallem
-                        liebe
-                        ich Naturreisen.</p>
+                    <summary data-i18n="Frage5"></summary>
+                    <p data-i18n="Antwort5"></p>
                 </details>
             </div>
         </div>

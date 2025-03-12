@@ -1,3 +1,64 @@
+// Sprachauswahl
+// Initialisiere i18next
+i18next.init({
+  lng: 'de',  // Standard-Sprache (deutsch)
+  resources: {
+    en: {
+      translation: {}
+    },
+    de: {
+      translation: {}
+    }
+  }
+}, function(err, t) {  // Abfangen Fehler bei Initialisierung
+  if (err) {
+    console.error("Fehler bei der Initialisierung von i18next:", err);
+  } else {
+    console.log("i18next ist bereit");
+
+    // Lade die Übersetzungen und aktualisiere den Inhalt nach der Initialisierung
+    loadTranslations().then(() => {
+      updateContent();  // Aktualisiere den Inhalt nach dem Laden der Übersetzungen
+    });
+  }
+});
+
+// Lade die Übersetzungen aus den externen JSON-Dateien
+function loadTranslations() {
+  return Promise.all([
+    fetch('Translation/en.json').then(response => response.json()).then(data => {
+      i18next.addResourceBundle('en', 'translation', data);
+    }),
+    fetch('Translation/de.json').then(response => response.json()).then(data => {
+      i18next.addResourceBundle('de', 'translation', data);
+    })
+  ]);
+}
+
+// Funktion zum Aktualisieren der Inhalte direkt im HTML über data-i18n
+function updateContent() {
+  const elements = document.querySelectorAll('[data-i18n]'); // Holt alle Elemente mit i18n Texten
+  elements.forEach(function(element) { //Für jedes Element im Array elements wird der Text im i18n geholt
+    const key = element.getAttribute('data-i18n');
+    element.innerHTML = i18next.t(key);  // Ersetze den Text mit der Übersetzung
+  });
+}
+
+// Funktion zum Ändern der Sprache
+function changeLanguage(language) {
+  i18next.changeLanguage(language, function(err, t) {
+    updateContent();  // Die Inhalte mit der neuen Sprache aktualisieren
+  });
+}
+
+// Event-Listener für die Auswahl der Sprache
+document.getElementById('LanguageSelect').addEventListener('change', function(e) {
+  const selectedLanguage = e.target.value;
+  changeLanguage(selectedLanguage);
+});
+
+
+
 // Abrufen der letzten Speicherung der Seite
 document.addEventListener("DOMContentLoaded", function () {
   const LastSaveElement = document.getElementById("LastSave");
@@ -95,3 +156,6 @@ document.getElementById("Settings").addEventListener("click", function () {
         SettingsMenu.classList.remove("visible");
       }
   });
+
+
+  
