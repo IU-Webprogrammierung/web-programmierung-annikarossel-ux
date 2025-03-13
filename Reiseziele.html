@@ -7,6 +7,7 @@
     <title>Reiseziele</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/Reiseziele.css">
+    <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.3/i18next.min.js"></script>
 </head>
 
 <body class="body">
@@ -14,12 +15,35 @@
         <header>
             <nav class="NavBar" id="NavigationBar">
                 <a class="HomePageName" href="index.html" aria-label="Gehe zu Startseite">Trails &amp; Tails </a>
-                <a class="NavItem" href="AboutMe.html" aria-label="Gehe zu Über mich-Seite">Über mich</a>
-                <a class="NavItem" href="Reiseziele.html" aria-label="Gehe zu Reiseziele-Seite">Reiseziele</a>
-                <a class="NavItem" href="Packlisten.html" aria-label="Gehe zu Packliste-Seite">Packlisten</a>
-                <a class="NavItem" href="FAQ.html" aria-label="Gehe zu FAQ-Seite">FAQ</a>
+                <a class="NavItem" href="AboutMe.html" aria-label="Gehe zu Über mich-Seite" data-i18n="ÜberMich"></a>
+                <a class="NavItem current" href="Reiseziele.html" aria-label="Gehe zu Reiseziele-Seite" data-i18n="Reiseziele"></a>
+                <a class="NavItem" href="Packlisten.html" aria-label="Gehe zu Packliste-Seite" data-i18n="Packlisten"></a>
+                <a class="NavItem" href="FAQ.html" aria-label="Gehe zu FAQ-Seite" data-i18n="FAQ"></a>
                 <a href="javascript:void(0);" class="icon" onclick="createResponsiveNavigation()">&#9776;</a>
             </nav>
+
+            <div class="SettingsContainer">
+                <button id="Settings" class="SettingsButton" aria-label="Einstellungen öffnen">
+                    &#9881;
+                </button>
+                <div id="SettingsMenu" class="HideMenu">
+                    <div class="SwitchPosition">
+                        <label for="switch" data-i18n="DarkMode"></label>
+                        <label class="switch">
+                            <input type="checkbox" id="DarkModeToggle">
+                            <span class="Slider"></span>
+                        </label>
+                    </div>
+                    <div class="SettingsPosition">
+                        <label for="LanguageSelect" data-i18n="Sprache"></label>
+                        <select id="LanguageSelect">
+                            <option value="de" data-i18n="Deutsch"></option>
+                            <option value="en" data-i18n="Englisch"></option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
         </header>
 
         <input class="search" type="text" id="search" placeholder="Suche nach Land...">
@@ -27,96 +51,80 @@
         <div class="card-container">
             <a class="card" href="" aria-label="Gehe zu Costa Rica-Detailseite">
                 <img class="CountryImage" src="Images/CostaRica.jpg" alt="Costa Rica">
-                <h2 class="ListItem">Costa Rica</h2>
-                <p class="beschreibung">Costa Rica habe ich auf einer 3-wöchigen Reise im Oktober 2022 bereist, also
-                    mitten in der
-                    Regenzeit.</p>
-            </a>
-
-            <a class=" card" href="" aria-label="Gehe zu Deutschland-Detailseite">
-                <img class="CountryImage" src="Images/Deutschland.jpg" alt="Deutschland">
-                <h2 class="ListItem">Deutschland</h2>
-                <p class="beschreibung">Deutschland ist für mich mehr als nur ein Reiseland. Egal ob Großstadt oder
-                    Natur – hier gibt es
-                    immer etwas zu erkunden.</p>
-            </a>
-
-            <a class=" card" href="" aria-label="Gehe zu Frankreich-Detailseite">
-                <img class="CountryImage" src="Images/Frankreich.jpg" alt="Frankreich">
-                <h2 class="ListItem">Frankreich</h2>
-                <p class="beschreibung">In Frankreich gibt es eine reiche Kultur von Landschaften an der Cote d'Azur bis
-                    hin zur Metropole Paris, ist für jeden etwas dabei.</p>
-            </a>
-
-            <a class=" card" href="" aria-label="Gehe zu Island-Detailseite">
-                <img class="CountryImage" src="Images/Island.jpg" alt="Island">
-                <h2 class="ListItem">Island</h2>
-                <p class="beschreibung">Island ist ein Land voller Kontraste - Feuer und Eis, rau und wunderschön
-                    zugleich - Ein
-                    richtiges Abenteuer!</p>
-            </a>
-
-            <a class=" card" href="" aria-label="Gehe zu Italien-Detailseite">
-                <img class="CountryImage" src="Images/Italien.jpg" alt="Italien">
-                <h2 class="ListItem">Italien</h2>
-                <p class="beschreibung">Das Land bietet an jeder Ecke wunderschöne Landschaften, Kultur und tolles
-                    Essen.</p>
-            </a>
-
-            <a class=" card" href="" aria-label="Gehe zu Japan-Detailseite">
-                <img class="CountryImage" src="Images/Japan.jpg" alt="Japan">
-                <h2 class="ListItem">Japan</h2>
-                <p class="beschreibung">Japan vereint Tradition und Moderne wie kein anderes Land. Insgesamt verbrachte
-                    ich zwei Wochen in diesem abwechslungsreichen Land.</p>
-            </a>
-
-            <a class=" card" href="" aria-label="Gehe zu Kambodscha-Detailseite">
-                <img class="CountryImage" src="Images/Kambodscha.jpg" alt="Kambodscha">
-                <h2 class="ListItem">Kambodscha</h2>
-                <p class="beschreibung">2022 habe ich hier die Tempelanlage Angkor Wat besucht - ein atemberaubendes
-                    Erlebnis.</p>
+                <h2 class="ListItem" data-i18n="Land1"></h2>
+                <p class="beschreibung" data-i18n="LandBeschreibung1"></p>
             </a>
 
             <a class=" card" href="" aria-label="Gehe zu Niederlande-Detailseite">
                 <img class="CountryImage" src="Images/Niederlande.jpg" alt="Niederlande">
-                <h2 class="ListItem">Niederlande</h2>
-                <p class="beschreibung">Malerische Grachten, wunderschöne Architektur und faszinierende Geschichte - das
-                    alles kann man ganz einfach in Amsterdam eleben.</p>
+                <h2 class="ListItem" data-i18n="Land2"></h2>
+                <p class="beschreibung" data-i18n="LandBeschreibung2"></p>
+            </a>
+
+            <a class=" card" href="" aria-label="Gehe zu Island-Detailseite">
+                <img class="CountryImage" src="Images/Island.jpg" alt="Island">
+                <h2 class="ListItem" data-i18n="Land3"></h2>
+                <p class="beschreibung" data-i18n="LandBeschreibung3"></p>
+            </a>
+
+            <a class=" card" href="" aria-label="Gehe zu Kambodscha-Detailseite">
+                <img class="CountryImage" src="Images/Kambodscha.jpg" alt="Kambodscha">
+                <h2 class="ListItem" data-i18n="Land4"></h2>
+                <p class="beschreibung" data-i18n="LandBeschreibung4"></p>
+            </a>
+
+            <a class=" card" href="" aria-label="Gehe zu Deutschland-Detailseite">
+                <img class="CountryImage" src="Images/Deutschland.jpg" alt="Deutschland">
+                <h2 class="ListItem" data-i18n="Land5"></h2>
+                <p class="beschreibung" data-i18n="LandBeschreibung5"></p>
+            </a>
+
+            <a class=" card" href="" aria-label="Gehe zu Frankreich-Detailseite">
+                <img class="CountryImage" src="Images/Frankreich.jpg" alt="Frankreich">
+                <h2 class="ListItem" data-i18n="Land6"></h2>
+                <p class="beschreibung" data-i18n="LandBeschreibung6"></p>
+            </a>
+
+            <a class=" card" href="" aria-label="Gehe zu Italien-Detailseite">
+                <img class="CountryImage" src="Images/Italien.jpg" alt="Italien">
+                <h2 class="ListItem" data-i18n="Land7"></h2>
+                <p class="beschreibung" data-i18n="LandBeschreibung7"></p>
+            </a>
+
+            <a class=" card" href="" aria-label="Gehe zu Japan-Detailseite">
+                <img class="CountryImage" src="Images/Japan.jpg" alt="Japan">
+                <h2 class="ListItem" data-i18n="Land8"></h2>
+                <p class="beschreibung" data-i18n="LandBeschreibung8"></p>
             </a>
 
             <a class=" card" href="" aria-label="Gehe zu Österreich-Detailseite">
                 <img class="CountryImage" src="Images/Österreich.jpg" alt="Österreich">
-                <h2 class="ListItem">Österreich</h2>
-                <p class="beschreibung">Malerische Alpen, entspannte Bergseen, atemberaubende Wanderungen und eine
-                    Millionenstadt - das alles vereint Österreich.</p>
+                <h2 class="ListItem" data-i18n="Land9"></h2>
+                <p class="beschreibung" data-i18n="LandBeschreibung9"></p>
             </a>
 
             <a class=" card" href="" aria-label="Gehe zu Portugal-Detailseite">
                 <img class="CountryImage" src="Images/Portugal.jpg" alt="Portugal">
-                <h2 class="ListItem">Portugal</h2>
-                <p class="beschreibung">Portugal fasziniert mit atemberaubenden, einsamen Stränden und meterhohen
-                    Wellen. Ein Spaß für die ganze Familie!</p>
+                <h2 class="ListItem" data-i18n="Land10"></h2>
+                <p class="beschreibung" data-i18n="LandBeschreibung10"></p>
             </a>
 
             <a class=" card" href="" aria-label="Gehe zu Schweden-Detailseite">
                 <img class="CountryImage" src="Images/Schweden.jpg" alt="Schweden">
-                <h2 class="ListItem">Schweden</h2>
-                <p class="beschreibung">Schweden habe ich im Dezember besucht, hier war ich bei einem Städtetrip in
-                    Stockholm. Es war gerade die Woche des Nobelpreises.</p>
+                <h2 class="ListItem" data-i18n="Land11"></h2>
+                <p class="beschreibung" data-i18n="LandBeschreibung11"></p>
             </a>
 
             <a class=" card" href="" aria-label="Gehe zu Spanien-Detailseite">
                 <img class="CountryImage" src="Images/Spanien.jpg" alt="Spanien">
-                <h2 class="ListItem">Spanien</h2>
-                <p class="beschreibung">Spanien habe ich bisher nur im Rahmen eines Städtetrips nach Barcelona
-                    kennengelernt - welche zu meinen Top 3 Städten der Welt gehört.</p>
+                <h2 class="ListItem" data-i18n="Land12"></h2>
+                <p class="beschreibung" data-i18n="LandBeschreibung12"></p>
             </a>
 
             <a class=" card" href="" aria-label="Gehe zu Thailand-Detailseite">
                 <img class="CountryImage" src="Images/Thailand.jpg" alt="Thailand">
-                <h2 class="ListItem">Thailand</h2>
-                <p class="beschreibung">Thailand ist kein geheimer Reisetip und sehr touristisch aufgeschlossen. Hier
-                    findet man sich einfach zurecht und wird belohnt mit tollen Stränden.</p>
+                <h2 class="ListItem" data-i18n="Land13"></h2>
+                <p class="beschreibung" data-i18n="LandBeschreibung13"></p>
             </a>
         </div>
 

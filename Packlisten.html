@@ -7,6 +7,7 @@
     <title>Packlisten</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/Packlisten.css">
+    <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.3/i18next.min.js"></script>
 </head>
 
 <body class="body">
@@ -14,186 +15,208 @@
         <header>
             <nav class="NavBar" id="NavigationBar">
                 <a class="HomePageName" href="index.html" aria-label="Gehe zu Startseite">Trails &amp; Tails </a>
-                <a class="NavItem" href="AboutMe.html" aria-label="Gehe zu Über mich-Seite">Über mich</a>
-                <a class="NavItem" href="Reiseziele.html" aria-label="Gehe zu Reiseziele-Seite">Reiseziele</a>
-                <a class="NavItem current" href="Packlisten.html" aria-label="Gehe zu Packliste-Seite">Packlisten</a>
-                <a class="NavItem" href="FAQ.html" aria-label="Gehe zu FAQ-Seite">FAQ</a>
+                <a class="NavItem" href="AboutMe.html" aria-label="Gehe zu Über mich-Seite" data-i18n="ÜberMich"></a>
+                <a class="NavItem" href="Reiseziele.html" aria-label="Gehe zu Reiseziele-Seite" data-i18n="Reiseziele"></a>
+                <a class="NavItem current" href="Packlisten.html" aria-label="Gehe zu Packliste-Seite" data-i18n="Packlisten"></a>
+                <a class="NavItem" href="FAQ.html" aria-label="Gehe zu FAQ-Seite" data-i18n="FAQ"></a>
                 <a href="javascript:void(0);" class="icon" onclick="createResponsiveNavigation()">&#9776;</a>
             </nav>
+
+            <div class="SettingsContainer">
+                <button id="Settings" class="SettingsButton" aria-label="Einstellungen öffnen">
+                    &#9881;
+                </button>
+                <div id="SettingsMenu" class="HideMenu">
+                    <div class="SwitchPosition">
+                        <label for="switch" data-i18n="DarkMode"></label>
+                        <label class="switch">
+                            <input type="checkbox" id="DarkModeToggle">
+                            <span class="Slider"></span>
+                        </label>
+                    </div>
+                    <div class="SettingsPosition">
+                        <label for="LanguageSelect" data-i18n="Sprache"></label>
+                        <select id="LanguageSelect">
+                            <option value="de" data-i18n="Deutsch"></option>
+                            <option value="en" data-i18n="Englisch"></option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </header>
 
-        <h2>Allgemeine Packlisten</h2>
+        <h2 data-i18n="AllgemeinePackliste"></h2>
 
         <table>
-            <caption>Kleidung</caption>
+            <caption data-i18n="TitleTable1"></caption>
             <thead>
                 <tr>
-                    <th>Item</th>
-                    <th>Anzahl</th>
-                    <th>Anmerkung</th>
+                    <th data-i18n="ColumnName1"></th>
+                    <th data-i18n="ColumnName2"></th>
+                    <th data-i18n="ColumnName3"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>T-Shirts</td>
+                    <td data-i18n="TableItem1"></td>
                     <td>4</td>
-                    <td>Unterschiedliche Materialien und Farben</td>
+                    <td data-i18n="TableAnmerkung1"></td>
                 </tr>
                 <tr>
-                    <td>Pullover</td>
+                    <td data-i18n="TableItem2"></td>
                     <td>3</td>
-                    <td>Eine gute Mischung aus dünneren Materialien (Theropullover) und dickere Wollpullover.</td>
+                    <td data-i18n="TableAnmerkung2"></td>
                 </tr>
                 <tr>
-                    <td>Kleid</td>
+                    <td data-i18n="TableItem3"></td>
                     <td>1</td>
-                    <td>Strandkleid</td>
+                    <td data-i18n="TableAnmerkung3"></td>
                 </tr>
                 <tr>
-                    <td>Jeans</td>
+                    <td data-i18n="TableItem4"></td>
                     <td>2</td>
-                    <td>Für kühlere Tage.</td>
+                    <td data-i18n="TableAnmerkung4"></td>
                 </tr>
                 <tr>
-                    <td>Jogginghosen und kurze Hosen</td>
+                    <td data-i18n="TableItem5"></td>
                     <td>3</td>
-                    <td>Gemütliche Hosen und je nach Reiseland auch kürzere Hosen.</td>
+                    <td data-i18n="TableAnmerkung5"></td>
                 </tr>
                 <tr>
-                    <td>Socken</td>
+                    <td data-i18n="TableItem6"></td>
                     <td>10</td>
-                    <td>Sneakersocken, dickere Socken und Wandersocken.</td>
+                    <td data-i18n="TableAnmerkung6"></td>
                 </tr>
             </tbody>
         </table>
 
         <table>
-            <caption>Hygiene</caption>
+            <caption data-i18n="TitleTable2"></caption>
             <thead>
                 <tr>
-                    <th>Item</th>
-                    <th>Anzahl</th>
-                    <th>Anmerkung</th>
+                    <th data-i18n="ColumnName1"></th>
+                    <th data-i18n="ColumnName2"></th>
+                    <th data-i18n="ColumnName3"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Shampoo, Spülung, Duschgel</td>
-                    <td>Jeweils 1</td>
-                    <td>Je nach Reise auch nur eine Reisegröße einpacken und vor Ort nachkaufen.</td>
-                </tr>
-                <tr>
-                    <td>Zahnbürste &amp; Zahnpaste</td>
+                    <td data-i18n="TableItem7"></td>
                     <td>1</td>
-                    <td>Kann auch vor Ort immer nachgekauft werden.</td>
+                    <td data-i18n="TableAnmerkung7"></td>
                 </tr>
                 <tr>
-                    <td>Sonnencreme</td>
+                    <td data-i18n="TableItem8"></td>
                     <td>1</td>
-                    <td>Lichtschutzfaktor 50</td>
+                    <td data-i18n="TableAnmerkung8"></td>
                 </tr>
                 <tr>
-                    <td>Makeup</td>
-                    <td>je nach Bedarf</td>
-                    <td>Mascara, Rouge, Lidschattenpalette, Augenbrauenstift, Pinsel, etc.</td>
-                </tr>
-                <tr>
-                    <td>Deo</td>
+                    <td data-i18n="TableItem9"></td>
                     <td>1</td>
-                    <td>Hier nehme ich gerne ein festes Deo, welches länger hält.</td>
+                    <td data-i18n="TableAnmerkung9"></td>
+                </tr>
+                <tr>
+                    <td data-i18n="TableItem10"></td>
+                    <td data-i18n="JeBedarf"></td>
+                    <td data-i18n="TableAnmerkung10"></td>
+                </tr>
+                <tr>
+                    <td data-i18n="TableItem11"></td>
+                    <td>1</td>
+                    <td data-i18n="TableAnmerkung11"></td>
                 </tr>
             </tbody>
         </table>
 
         <table>
-            <caption>Technik</caption>
+            <caption data-i18n="TitleTable3"></caption>
             <thead>
                 <tr>
-                    <th>Item</th>
-                    <th>Anzahl</th>
-                    <th>Anmerkung</th>
+                    <th data-i18n="ColumnName1"></th>
+                    <th data-i18n="ColumnName2"></th>
+                    <th data-i18n="ColumnName3"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Smartphone</td>
+                    <td data-i18n="TableItem12"></td>
                     <td>1</td>
-                    <td>Ein gutes Smartphone ersetzt für mich eine professionelle Kamera.</td>
+                    <td data-i18n="TableAnmerkung12"></td>
                 </tr>
                 <tr>
-                    <td>Kamera</td>
+                    <td data-i18n="TableItem13"></td>
                     <td>1</td>
-                    <td>Je nach Bedarf, ich persönlich nehme meist nur mein Handy mit.</td>
+                    <td data-i18n="TableAnmerkung13"></td>
                 </tr>
                 <tr>
-                    <td>Powerbank</td>
+                    <td data-i18n="TableItem14"></td>
                     <td>1</td>
-                    <td>20.000mah</td>
+                    <td data-i18n="TableAnmerkung14"></td>
                 </tr>
             
             </tbody>
         </table>
 
-        <h2>Spezielle Packlisten</h2>
+        <h2 data-i18n="SpeziellePackliste"></h2>
 
         <table>
-            <caption>Kalte Ziele</caption>
+            <caption data-i18n="TitleTable4"></caption>
             <thead>
                 <tr>
-                    <th>Item</th>
-                    <th>Anzahl</th>
-                    <th>Anmerkung</th>
+                    <th data-i18n="ColumnName1"></th>
+                    <th data-i18n="ColumnName2"></th>
+                    <th data-i18n="ColumnName3"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Handschuhe</td>
+                    <td data-i18n="TableItem15"></td>
                     <td>1</td>
-                    <td>Je nach Reiseziel unterschiedliche Dicke</td>
+                    <td data-i18n="TableAnmerkung15"></td>
                 </tr>
                 <tr>
-                    <td>Schneehose</td>
+                    <td data-i18n="TableItem16"></td>
                     <td>1</td>
-                    <td>Für Skifahren, Wandertouren oder Saziergänge.</td>
+                    <td data-i18n="TableAnmerkung16"></td>
                 </tr>
                 <tr>
-                    <td>Kältecreme</td>
+                    <td data-i18n="TableItem17"></td>
                     <td>1</td>
-                    <td>Schützt bei sehr niedrigen Temperaturen die Haut.</td>
+                    <td data-i18n="TableAnmerkung17"></td>
                 </tr>
             
             </tbody>
         </table>
 
         <table>
-            <caption>Camping</caption>
+            <caption data-i18n="TitleTable5"></caption>
             <thead>
                 <tr>
-                    <th>Item</th>
-                    <th>Anzahl</th>
-                    <th>Anmerkung</th>
+                    <th data-i18n="ColumnName1"></th>
+                    <th data-i18n="ColumnName2"></th>
+                    <th data-i18n="ColumnName3"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Campingkocher</td>
+                    <td data-i18n="TableItem18"></td>
                     <td>1</td>
-                    <td>Mit Gaskartuschen</td>
+                    <td data-i18n="TableAnmerkung18"></td>
                 </tr>
                 <tr>
-                    <td>Trinkfalschen</td>
+                    <td data-i18n="TableItem19"></td>
                     <td>1</td>
-                    <td>750ml zum Wiederaufbefüllen in der Natur.</td>
+                    <td data-i18n="TableAnmerkung19"></td>
                 </tr>
                 <tr>
-                    <td>Hängematte</td>
+                    <td data-i18n="TableItem20"></td>
                     <td>1</td>
-                    <td>Zum entspannten Liegen</td>
+                    <td data-i18n="TableAnmerkung20"></td>
                 </tr>
                 <tr>
-                    <td>Stirnlampe</td>
+                    <td data-i18n="TableItem21"></td>
                     <td>1</td>
-                    <td>Zelt oder zum nächtlichen Toilettengang.</td>
+                    <td data-i18n="TableAnmerkung21"></td>
                 </tr>
             
             </tbody>
