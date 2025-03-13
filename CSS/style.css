@@ -1,5 +1,4 @@
- /* Allgemeine Control Anweisungen */
-
+ /* ------------------------------Allgemeine Control Anweisungen-------------------------------------------- */
  body {
    font-family: Verdana, sans-serif;
    background-color: #7ab98995;
@@ -41,8 +40,7 @@
  }
 
 
- /* -------------------------------------------------------------------------- */
- /* Universale Anweisungen */
+ /* -------------------------------Universale Anweisungen------------------------------------------- */
  @media screen and (max-width: 786px) {
    .MainContainer {
      margin: 1rem;
@@ -79,8 +77,9 @@
    grid-gap: 2rem;
  }
 
- /* -------------------------------------------------------------------------- */
- /* Anweisungen für Startseite */
+
+
+ /* ------------------------------Anweisungen für Startseite-------------------------------------------- */
  /* Hero Image */
  picture img {
    width: 100%;
@@ -109,8 +108,9 @@
    }
  }
 
- /* -------------------------------------------------------------------------- */
- /* 1. Section: Über mich Abschnitt */
+
+
+ /* ----------------------------------1. Section: Über mich Abschnit---------------------------------------- */
  .IntroductionCard img {
    width: 15rem;
    height: 15rem;
@@ -161,8 +161,7 @@
 
  }
 
- /* -------------------------------------------------------------------------- */
- /* 2. Section: Reiseziele Abschnitt */
+ /* -------------------------------2. Section: Reiseziele Abschnitt------------------------------------------- */
  /* Linkes Länderbild in Card */
  .VisitedCountryImage {
    width: 100%;
@@ -244,8 +243,10 @@
    background-color: #8321ad55;
  }
 
- /* -------------------------------------------------------------------------- */
- /* 3. Section: Packliste und FAQ */
+
+
+
+ /* -------------------------------3. Section: Packliste und FAQ------------------------------------------- */
  /* Packlisten */
  .PackingSection li {
    background-color: #c5e0cc95;
@@ -275,14 +276,7 @@
 
 
 
-
-
-
-
-
-
- /* -------------------------------------------------------------------------- */
- /* Navigationsleiste */
+ /* -------------------------------Navigationsleiste------------------------------------------- */
  /* Mobile */
  @media screen and (max-width: 786px) {
    .NavBar a:not(:first-child) {
@@ -294,14 +288,37 @@
      display: block;
    }
 
+   .NavBar {
+    display: flex;
+    justify-content: space-between; /* Verteilt Elemente */
+    align-items: center; /* Hält alles auf einer Linie */
+    padding: 10px;
+}
+
    .NavBar.responsive {
-     position: relative;
+    position: fixed; /* Fixiert das Menü */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Volle Höhe des Viewports */
+    background-color: #c5e0cc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Stellt sicher, dass es über allem liegt */
+   }
+
+   .CloseButton {
+    display: none;
+    position: fixed; /* Fixiert das Menü */
+    top: 70px;
+    right: 100px;
+    cursor: pointer;
    }
 
    .NavBar.responsive .icon {
-     position: absolute;
-     right: 0;
-     top: 0;
+     display: none;
    }
 
    .NavBar.responsive a {
@@ -319,16 +336,30 @@
    }
  }
 
+  /* Tablet*/
+  @media screen and (min-width: 787px) and (max-width: 1200px) {
+    .HomePageName {
+      font-size: 24px;
+    }
+ 
+    .NavItem {
+      font-size: 14px;
+    }
+  }
+
+/* Desktop*/
+    @media screen and (min-width: 1201px) {
+      .HomePageName {
+        font-size: 32px;
+      }
+   
+      .NavItem {
+        font-size: 18px;
+      }
+    }
+
  /* Desktop und Tablet*/
  @media screen and (min-width: 787px) {
-   .HomePageName {
-     font-size: 32px;
-   }
-
-   .NavItem {
-     font-size: 18px;
-   }
-
    header {
      display: flex;
      align-items: center;
@@ -343,6 +374,10 @@
    .NavItem:hover {
      background-color: #d3e9dd;
    }
+ }
+
+ .CloseButton {
+  display: none;
  }
 
  .NavBar {
@@ -376,7 +411,7 @@
 
 
 
-
+/* -------------------------------Einstellungs Menu------------------------------------------- */
 /* Einstellungs Button */
  .SettingsButton {
   font-weight: bold;
@@ -421,7 +456,9 @@
 }
 
 
-/* Switch*/
+
+
+ /* -------------------------------Switch------------------------------------------- */
 /* Größe + Positionierung Switch*/
 .switch {
   position: relative;
@@ -437,7 +474,9 @@
   height: 0;
 }
 
-/* Slider */
+
+
+ /* -------------------------------Slider------------------------------------------- */
 .Slider {
   position: absolute;
   cursor: pointer; /* Zeigt an, dass Switch klickbar ist */

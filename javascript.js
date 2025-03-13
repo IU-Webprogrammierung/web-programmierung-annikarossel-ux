@@ -1,4 +1,4 @@
-// Sprachauswahl
+ /* -----------------------------Sprachauswahl----------------------------------- */
 // Initialisiere i18next
 i18next.init({
   lng: localStorage.getItem('language') || 'de',   // Holt Sprache aus local Storage ansonsten ist Standard-Sprache (deutsch)
@@ -61,9 +61,7 @@ document.getElementById('LanguageSelect').addEventListener('change', function (e
 
 
 
-
-
-
+ /* -----------------------------Letzte Speicherung----------------------------------- */
 // Abrufen der letzten Speicherung der Seite
 document.addEventListener("DOMContentLoaded", function () {
   const LastSaveElement = document.getElementById("LastSave");
@@ -77,16 +75,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// Fügt dem Klassenname das Attribut responsive hinzu
+ /* ------------------------------Navigation-------------------------------------------- */
+// Fügt dem Klassenname das Attribut responsive hinzu & Zeigt den X Button an 
 function createResponsiveNavigation() {
   var NavigationBar = document.getElementById("NavigationBar");
   if (NavigationBar.className === "NavBar") {
     NavigationBar.className += " responsive";
+    const closeButton = document.querySelector(".CloseButton");
+    closeButton.style.display = "inline-block"; // X-Button anzeigen
   } else {
     NavigationBar.className = "NavBar";
   }
 }
+function closeMenu() {
+  const closeButton = document.querySelector(".CloseButton");
+  const nav = document.getElementById("NavigationBar");
 
+  nav.classList.remove("responsive");   // Menü schließen, indem die "responsive" Klasse entfernt wird
+  closeButton.style.display = "none";   // X-Button wird wieder versteckt
+
+}
+
+ /* ------------------------------Suche Karten-------------------------------------------- */
 // Aufsetzen Funktion, die auf losgelassene Taste reagiert
 document.addEventListener("DOMContentLoaded", function () {
   const searchInputElement = document.getElementById("search");
@@ -114,7 +124,7 @@ function filterList() {
   })
 }
 
-
+ /* ------------------------------Slider Homepage-------------------------------------------- */
 // Slider Logik wird nur ausgeführt, wenn index.html Seite geöffnet ist
 if (document.body.getAttribute("data-page") === "index") {
   let slideIndex = 1; // Erstes Bild wird auf Slider angezeigt
@@ -150,6 +160,10 @@ if (document.body.getAttribute("data-page") === "index") {
   }
 }
 
+
+
+
+ /* ------------------------------Einstellungs Menu-------------------------------------------- */
 // Öffne Einstellungsmenü bei Klick auf Button
 const SettingsMenu = document.getElementById("SettingsMenu");
 const SettingsButton = document.getElementById("Settings");
