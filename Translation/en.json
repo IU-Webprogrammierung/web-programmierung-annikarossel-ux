@@ -66,12 +66,12 @@
     "SicherheitGesundheit": "Safety &amp; Health",
     "EssenKultur": "Food &amp; Culture",
     "Frage": "Do you have a question?",
-    "Vorname": "First Name:",
-    "Email": "Email:",
+    "Vorname": "First Name",
+    "Email": "Email",
     "Veröffentlichung": "May I publish your question?",
     "FrageOption1": "Yes",
     "FrageOption2": "No",
-    "Nachricht": "Message:",
+    "Nachricht": "Message",
     "LinkCollection1": "&#x1F3E2; German Foreign Office",
     "LinkCollection2": "&#x2708; Flight Search",
     "LinkCollection3": "&#x1F3E8; Accommodation Search",
@@ -157,5 +157,10 @@
     "LandBeschreibung12": "So far, I have only visited Spain as part of a city trip to Barcelona – which is one of my top 3 cities in the world.",
     "LandBeschreibung13": "Thailand is no hidden travel secret and is very tourist-friendly. It's easy to navigate, and you are rewarded with beautiful beaches.",
     "LinkCollection": "Link Collection",
-    "submit":"Submit"
+    "submit":"Submit",
+    "darkMode": {
+        "on": "Dark Mode activated",
+        "off": "Dark Mode deactivated"
+    },
+    "Search":"Search for country"
 }

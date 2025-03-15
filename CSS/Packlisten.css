@@ -1,93 +1,105 @@
-table,
-th,
-td {
-   
-    border-collapse: collapse;
-    padding: 10px;
-    text-align: left;
-}
+ /* -------------------------------Allgemeine Control Anweisungen------------------------------------------- */
+ table,
+ th,
+ td {
 
-th {
-    background-color: #62956e95;
-}
+     border-collapse: collapse;
+     padding: 10px;
+     text-align: left;
+ }
 
-caption {
-    text-align: left;
-    font-weight: bold;
-    padding-bottom: 1rem;
-}
+ th {
+     background-color: #62956e95;
+ }
 
-td {
-    overflow-wrap: break-word;
-    hyphens: auto;
-}
+ th.dark-mode {
+     background-color: #1C5E39;
+ }
 
+ caption {
+     text-align: left;
+     font-weight: bold;
+     padding-bottom: 1rem;
+ }
 
-@media screen and (max-width: 786px) {
-
-    /* Tabelle wird in Block-Layout angezeigt */
-    table,
-    thead,
-    tbody,
-    th,
-    td,
-    tr {
-        display: block;
-    }
-
-    /* Verstecken des Table-Headers */
-    thead {
-        display: none;
-    }
-
-    /* Table data wird in einer row dargestellt */
-    td {
-        border: none;
-        border-bottom: 1px solid #eee;
-        position: relative;
-        padding-left: 50%;
-    }
-
-    /* Border, zur besseren Unterscheidung der einzelnen Datensätze  */
-    tr {
-        border: 1px solid #ccc;
-        margin-top: 1rem;
-        border-radius: 10px;
-    }
-
-
-    /* CSS Styling vor jeder Tabellenzeile  */
-    td:before {
-        position: absolute;
-        top: px;
-        left: 6px;
-        width: 45%;
-        padding-right: 10px;
-        white-space: nowrap;
-    }
-
-    /* Benennung der Datensätze, sodass eine Zuordnung ermöglicht wird */
-    td:nth-of-type(1):before {
-        content: "Item";
-    }
-
-    td:nth-of-type(2):before {
-        content: "Anzahl";
-    }
-
-    td:nth-of-type(3):before {
-        content: "Anmerkung";
-    }
+ td {
+     overflow-wrap: break-word;
+     hyphens: auto;
+ }
 
 
 
-}
+ /* -------------------------------Responsive Anpassungen------------------------------------------- */
+ @media screen and (max-width: 786px) {
 
-/* Farbliche Unterscheidung der einzelnen Datensätze anhand geradem/ ungeradem Datensatz */
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-tr:nth-child(odd) {
-    background-color: white;
-}
+     /* Tabelle wird in Block-Layout angezeigt */
+     table,
+     thead,
+     tbody,
+     th,
+     td,
+     tr {
+         display: block;
+     }
 
+     thead {
+         display: none; /* Verstecken des Table-Headers */
+     }
+
+     td {
+         border: none;
+         border-bottom: 1px solid #eee;
+         position: relative;
+         padding-left: 50%;
+     }
+
+     tr {
+         border: 1px solid #ccc;
+         margin-top: 1rem;
+         border-radius: 10px;
+     }
+
+
+     /* CSS Styling vor jeder Tabellenzeile  */
+     td:before {
+         position: absolute;
+         top: px;
+         left: 6px;
+         width: 45%;
+         padding-right: 10px;
+         white-space: nowrap;
+     }
+
+     /* Benennung der Datensätze, sodass eine Zuordnung ermöglicht wird */
+     td:nth-of-type(1):before {
+         content: "Item";
+     }
+
+     td:nth-of-type(2):before {
+         content: "Anzahl";
+     }
+
+     td:nth-of-type(3):before {
+         content: "Anmerkung";
+     }
+
+
+
+ }
+
+ /* Farbliche Unterscheidung der einzelnen Datensätze anhand geradem/ ungeradem Wert */
+ tr:nth-child(even) {
+     background-color: #f2f2f2;
+ }
+
+ tr:nth-child(odd) {
+     background-color: white;
+ }
+
+ tr:nth-child(even).dark-mode {
+     background-color: #323232;
+ }
+
+ tr:nth-child(odd).dark-mode {
+     background-color: rgb(84, 83, 83);
+ }

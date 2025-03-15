@@ -4,6 +4,11 @@
    background-color: #7ab98995;
  }
 
+ body.dark-mode {
+  background-color: #274b37;
+  color: white;
+}
+
  * {
    box-sizing: border-box;
  }
@@ -20,8 +25,12 @@
    justify-content: space-between;
    align-items: center;
    color: #1C5E39;
-   ;
  }
+
+ header.dark-mode {
+  color: white;
+}
+
 
  li {
    list-style-type: none;
@@ -33,10 +42,8 @@
  }
 
  ul {
-   padding: 0;
-   /* Entfernt Standard Padding */
-   margin: 0;
-   /* Entfernt Standard Margin */
+   padding: 0; /* Entfernt Standard Padding */
+   margin: 0; /* Entfernt Standard Margin */
  }
 
 
@@ -77,6 +84,10 @@
    grid-gap: 2rem;
  }
 
+ .MainContainer.dark-mode {
+  background-color: rgb(26, 26, 26);
+}
+
 
 
  /* ------------------------------Anweisungen für Startseite-------------------------------------------- */
@@ -102,6 +113,9 @@
    border-radius: 10px;
  }
 
+ .HeroImageContainer h3.dark-mode {
+  color: black;
+}
  @media screen and (max-width: 786px) {
    .HeroImageContainer h3 {
      padding: 1rem;
@@ -122,15 +136,16 @@
    padding: 1rem;
    font-weight: bold;
    border-radius: 25px;
-   display: block;
-   /* Link zu einem Block-Element */
+   display: block; /* Link zu einem Block-Element */
    width: 100%;
    margin-top: 1rem;
-   overflow-wrap: break-word;
-   /* Automatisches Umbrechen von zu langen Wörtern */
-   hyphens: auto;
-   /* Silbentrennung */
+   overflow-wrap: break-word; /* Automatisches Umbrechen von zu langen Wörtern */
+   hyphens: auto; /* Silbentrennung */
  }
+
+ .NewsLink.dark-mode {
+  background-color: #8100b8;
+}
 
  /* Desktop */
  @media screen and (min-width: 1201px) {
@@ -255,6 +270,10 @@
    margin-bottom: 1rem;
  }
 
+ .PackingSection li.dark-mode {
+  background-color: #274b37;
+}
+
  /* Desktop und Tablet*/
  @media screen and (min-width: 787px) {
    .ThirdSection {
@@ -308,6 +327,11 @@
     align-items: center;
     z-index: 1000; /* Stellt sicher, dass es über allem liegt */
    }
+
+
+   .NavBar.responsive.dark-mode {
+    background-color: #274b37;
+  }
 
    .CloseButton {
     display: none;
@@ -374,6 +398,10 @@
    .NavItem:hover {
      background-color: #d3e9dd;
    }
+
+   .NavItem:hover.dark-mode {
+    background-color: #467f60;
+  }
  }
 
  .CloseButton {
@@ -408,6 +436,11 @@
    color: white;
  }
 
+ .NavBar a.current.dark-mode {
+  background-color: #6ce8a1;
+  color: black;
+}
+
 
 
 
@@ -420,6 +453,11 @@
   border: none;
   font-size: 24px;
   cursor: pointer; /* Fügt Hover Effekt hinzu */
+}
+
+.SettingsButton.dark-mode {
+  color: white;
+  background-color: rgb(26, 26, 26);
 }
 
 /* Positionierung Settings Popup */
@@ -441,6 +479,12 @@
   width: 150px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+}
+
+#SettingsMenu.dark-mode  {
+  background: rgb(26, 26, 26);
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
 }
 
 /* Wenn das Menü sichtbar ist */
@@ -514,4 +558,8 @@ input:checked + .Slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+}
+
+.ScreenReaderLabel {
+  display:none;
 }

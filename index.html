@@ -16,8 +16,10 @@
             <nav class="NavBar" id="NavigationBar">
                 <a class="HomePageName" href="index.html" aria-label="Gehe zu Startseite">Trails &amp; Tails </a>
                 <a class="NavItem" href="AboutMe.html" aria-label="Gehe zu Über mich-Seite" data-i18n="ÜberMich"></a>
-                <a class="NavItem" href="Reiseziele.html" aria-label="Gehe zu Reiseziele-Seite" data-i18n="Reiseziele"></a>
-                <a class="NavItem" href="Packlisten.html" aria-label="Gehe zu Packliste-Seite" data-i18n="Packlisten"></a>
+                <a class="NavItem" href="Reiseziele.html" aria-label="Gehe zu Reiseziele-Seite"
+                    data-i18n="Reiseziele"></a>
+                <a class="NavItem" href="Packlisten.html" aria-label="Gehe zu Packliste-Seite"
+                    data-i18n="Packlisten"></a>
                 <a class="NavItem" href="FAQ.html" aria-label="Gehe zu FAQ-Seite" data-i18n="FAQ"></a>
                 <a href="javascript:void(0);" class="icon" onclick="createResponsiveNavigation()">&#9776;</a>
                 <span class="CloseButton" onclick="closeMenu()">&#10005;</span>
@@ -30,10 +32,11 @@
                 </button>
                 <div id="SettingsMenu" class="HideMenu">
                     <div class="SwitchPosition">
-                        <label for="switch" data-i18n="DarkMode"></label>
-                        <label class="switch">
+                        <label for="Switch" data-i18n="DarkMode"></label>
+                        <label id="Switch" class="switch">
                             <input type="checkbox" id="DarkModeToggle">
-                            <span class="Slider"></span>
+                            <span class="Slider" aria-hidden="true"></span>
+                            <span class="ScreenReaderLabel" id="LabelDarkMode" data-i18n="darkMode.off"></span>
                         </label>
                     </div>
                     <div class="SettingsPosition">
@@ -44,10 +47,8 @@
                         </select>
                     </div>
                 </div>
-
-
-
             </div>
+            
         </header>
 
         <div class="HeroImageContainer">
@@ -62,7 +63,7 @@
 
         <div class="FirstSection">
             <a href="AboutMe.html" aria-label="Gehe zu Über mich-Seite">
-                <h2 data-i18n="ÜberMichNavigation"></h2>
+                <h1 data-i18n="ÜberMichNavigation"></h1>
             </a>
             <div class="IntroductionCard">
                 <img class="ProfileImage" src="Images/Profile.jpeg" alt="Profilbild">
@@ -74,9 +75,12 @@
 
                 <div class="News">
                     <h3>Neuigkeiten</h3>
-                    <a class="NewsLink" href="Reiseziele.html" aria-label="Gehe zu Reiseziele-Seite" data-i18n="NewsLink1"></a>
-                    <a class="NewsLink" href="Packlisten.html" aria-label="Gehe zu Packliste-Seite" data-i18n="NewsLink2"></a>
-                    <a class="NewsLink" href="AboutMe.html" aria-label="Gehe zu Über mich-Seite" data-i18n="NewsLink3"></a>
+                    <a class="NewsLink" href="Reiseziele.html" aria-label="Gehe zu Reiseziele-Seite"
+                        data-i18n="NewsLink1"></a>
+                    <a class="NewsLink" href="Packlisten.html" aria-label="Gehe zu Packliste-Seite"
+                        data-i18n="NewsLink2"></a>
+                    <a class="NewsLink" href="AboutMe.html" aria-label="Gehe zu Über mich-Seite"
+                        data-i18n="NewsLink3"></a>
                     <a class="NewsLink" href="FAQ.html" aria-label="Gehe zu FAQ-Seite" data-i18n="NewsLink4"></a>
                 </div>
 
@@ -86,7 +90,8 @@
         <div class="SecondSection">
             <div class="Carousel">
                 <div class="CarouselItem">
-                    <img class="VisitedCountryImage" src="Images/CostaRicaBreitbild.jpg">
+                    <img class="VisitedCountryImage" src="Images/CostaRicaBreitbild.jpg"
+                        alt="Landschaft von Costa Rica">
                     <div class="DescriptionCountry">
                         <h3 class="CountryName" data-i18n="Land1"></h3>
                         <p class="beschreibung" data-i18n="LandBeschreibung1"></p>
@@ -94,7 +99,7 @@
                 </div>
 
                 <div class="CarouselItem">
-                    <img class="VisitedCountryImage" src="Images/NiederlandeBreitbild.jpg">
+                    <img class="VisitedCountryImage" src="Images/NiederlandeBreitbild.jpg" alt="Grachten von Amsterdam">
                     <div class="DescriptionCountry">
                         <h3 class="CountryName" data-i18n="Land2"></h3>
                         <p class="beschreibung" data-i18n="LandBeschreibung2"></p>
@@ -102,7 +107,7 @@
                 </div>
 
                 <div class="CarouselItem">
-                    <img class="VisitedCountryImage" src="Images/IslandBreitbild.jpg">
+                    <img class="VisitedCountryImage" src="Images/IslandBreitbild.jpg" alt="Wasserfall in Island">
                     <div class="DescriptionCountry">
                         <h3 class="CountryName" data-i18n="Land3"></h3>
                         <p class="beschreibung" data-i18n="LandBeschreibung3"></p>
@@ -110,7 +115,7 @@
                 </div>
 
                 <div class="CarouselItem">
-                    <img class="VisitedCountryImage" src="Images/KambodschaBreitbild.jpg">
+                    <img class="VisitedCountryImage" src="Images/KambodschaBreitbild.jpg" alt=" Tempel in Kambodscha">
                     <div class="DescriptionCountry">
                         <h3 class="CountryName" data-i18n="Land4"></h3>
                         <p class="beschreibung" data-i18n="LandBeschreibung4"></p>
@@ -119,8 +124,8 @@
 
 
 
-                <a class="PreviousButton" onclick="SlideChange(-1)">&#10094;</a>
-                <a class="NextButton" onclick="SlideChange(1)">&#10095;</a>
+                <a class="PreviousButton" onclick="SlideChange(-1)" tabindex="0" role="button">&#10094;</a>
+                <a class="NextButton" onclick="SlideChange(1)" tabindex="0" role="button">&#10095;</a>
             </div>
 
 
@@ -136,7 +141,7 @@
         <div class="ThirdSection">
             <div class="PackingSection">
                 <a href="Packlisten.html" aria-label="Gehe zu Packliste-Seite">
-                    <h2 data-i18n="PacklisteIcon"></h2>
+                    <h1 data-i18n="PacklisteIcon"></h1>
                 </a>
                 <ul>
                     <li>
@@ -158,7 +163,7 @@
 
             <div class="FAQSection">
                 <a href="FAQ.html" aria-label="Gehe zu FAQ-Seite">
-                    <h2 data-i18n="FAQIcon"></h2>
+                    <h1 data-i18n="FAQIcon"></h1>
                 </a>
                 <details>
                     <summary data-i18n="Frage1"></summary>

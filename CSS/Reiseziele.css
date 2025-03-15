@@ -1,6 +1,13 @@
+ /* -------------------------------Karten------------------------------------------- */
+
 .card:hover {
     color: white;
-    background-color: #62956e95;
+    background-color: #1C5E39;
+  }
+
+.card:hover.dark-mode {
+    color: black;
+    background-color: #6ce8a2;;
   }
 
 .card-container {
@@ -12,10 +19,14 @@
 
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border: 5px solid #62956e95;
+    border: 5px solid #1C5E39;
     border-radius: 10%;
     text-align: center;
     padding: 1rem;
+  }
+
+.card.dark-mode {
+    border: 5px solid #6ce8a1;
   }
 
   .CountryImage {
@@ -24,7 +35,7 @@
     border-radius: 50%;
   }
 
-
+ /* -------------------------------Responsive Anweisungen------------------------------------------- */
 @media screen and (min-width: 786px) {
  .card {
     max-width: 350px;

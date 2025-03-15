@@ -1,4 +1,4 @@
- /* -----------------------------Sprachauswahl----------------------------------- */
+/* -----------------------------Sprachauswahl----------------------------------- */
 // Initialisiere i18next
 i18next.init({
   lng: localStorage.getItem('language') || 'de',   // Holt Sprache aus local Storage ansonsten ist Standard-Sprache (deutsch)
@@ -43,6 +43,27 @@ function updateContent() {
     const key = element.getAttribute('data-i18n');
     element.innerHTML = i18next.t(key);  // Ersetze den Text mit der Übersetzung
   });
+  // Spezialelemente, die nicht durch i18n direkt übersetzt werden können
+  const inputElement = document.getElementById('SubmitButton');
+  const searchField = document.getElementById('search');
+  const NameInput = document.getElementById('Name');
+  const EmailInput = document.getElementById('email');
+  const MessageInput = document.getElementById('message');
+  if (inputElement) {  // Nur ausführen, wenn das Element existiert
+    inputElement.value = i18next.t('submit');  // Setze den Wert
+  }
+  if (searchField) {  // Nur ausführen, wenn das Element existiert
+    searchField.placeholder = i18next.t('Search');  // Setze den Wert
+  }
+  if (NameInput) {  // Nur ausführen, wenn das Element existiert
+    NameInput.placeholder = i18next.t('Vorname');  // Setze den Wert
+  }
+  if (EmailInput) {  // Nur ausführen, wenn das Element existiert
+    EmailInput.placeholder = i18next.t('Email');  // Setze den Wert
+  }
+  if (MessageInput) {  // Nur ausführen, wenn das Element existiert
+    MessageInput.placeholder = i18next.t('Nachricht');  // Setze den Wert
+  }
 }
 
 // Funktion zum Ändern der Sprache
@@ -59,9 +80,66 @@ document.getElementById('LanguageSelect').addEventListener('change', function (e
   changeLanguage(selectedLanguage);
 });
 
+/* ------------------------------Einstellungs Menu-------------------------------------------- */
+// Öffne Einstellungsmenü bei Klick auf Button
+const SettingsMenu = document.getElementById("SettingsMenu");
+const SettingsButton = document.getElementById("Settings");
+document.getElementById("Settings").addEventListener("click", function () {
+  SettingsMenu.classList.toggle("visible");
+});
+
+// Schließt das Menü, wenn man außerhalb klickt
+document.addEventListener("click", function (event) {
+  if (!SettingsButton.contains(event.target) && !SettingsMenu.contains(event.target)) {
+    SettingsMenu.classList.remove("visible");
+  }
+});
 
 
- /* -----------------------------Letzte Speicherung----------------------------------- */
+
+
+
+
+/* -------------------------------------Dark Mode-------------------------------------------------- */
+// Hinzufügen Text zur Barrierefreiheit
+document.getElementById("DarkModeToggle").addEventListener("change", function () {
+  const label = document.getElementById("LabelDarkMode");
+  label.textContent = this.checked ? i18next.t("darkMode.on") : i18next.t("darkMode.off");
+});
+
+
+// Ändern Theme
+const ToggleDarkMode = document.getElementById("DarkModeToggle"); // Speicherung Status Toggle
+
+// Ändern des Toggle Zustandes
+ToggleDarkMode.addEventListener("click", function () {
+  const isDarkMode = ToggleDarkMode.checked; // Hole den aktuellen Zustand des Toggles
+  applyDarkMode(isDarkMode);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const savedDarkModeState = localStorage.getItem("darkMode") === "true"; // Hole den gespeicherten Zustand
+  ToggleDarkMode.checked = savedDarkModeState; // Setze den Toggle entsprechend
+  applyDarkMode(savedDarkModeState);
+});
+
+
+// Fügt/ Entfernt allen Elementen das dark mode class Element
+function applyDarkMode(isDarkMode) {
+  document.querySelectorAll('*').forEach(function (element) {
+    if (isDarkMode) {
+      element.classList.add('dark-mode'); // Fügt allen Elementen die dark mode Klasse hinzu
+    } else {
+      element.classList.remove('dark-mode'); // Entfernt allen Elementen die dark mode Klasse
+    }
+  });
+  localStorage.setItem("darkMode", isDarkMode); // Setzte das Attribut darkMode im localStorage, damit das Ändern von html Seiten + beibehalten vom Theme funktioniert 
+}
+
+
+
+
+/* -----------------------------Letzte Speicherung----------------------------------- */
 // Abrufen der letzten Speicherung der Seite
 document.addEventListener("DOMContentLoaded", function () {
   const LastSaveElement = document.getElementById("LastSave");
@@ -74,19 +152,32 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
- /* ------------------------------Navigation-------------------------------------------- */
+/* ------------------------------Navigation-------------------------------------------- */
 // Fügt dem Klassenname das Attribut responsive hinzu & Zeigt den X Button an 
 function createResponsiveNavigation() {
   var NavigationBar = document.getElementById("NavigationBar");
-  if (NavigationBar.className === "NavBar") {
-    NavigationBar.className += " responsive";
-    const closeButton = document.querySelector(".CloseButton");
-    closeButton.style.display = "inline-block"; // X-Button anzeigen
+  const closeButton = document.querySelector(".CloseButton");
+  const savedDarkModeState = localStorage.getItem("darkMode") === "true"; // Korrekte Überprüfung
+
+  const isNowResponsive = NavigationBar.classList.toggle("responsive");   // Fügte responsive Klasse hinzu
+  if (closeButton) {
+    if (isNowResponsive) {
+      closeButton.style.display = "inline-block"; // X-Button wird angezeigt  
+    } else {
+      closeButton.style.display = "none"; // X-Button wird versteckt  
+    }
+  }
+
+  // Dark Mode anwenden, wenn Navigation offen ist
+  if (isNowResponsive && savedDarkModeState) {
+    NavigationBar.classList.add("dark-mode");
   } else {
-    NavigationBar.className = "NavBar";
+    NavigationBar.classList.remove("dark-mode");
   }
 }
+
+
+
 function closeMenu() {
   const closeButton = document.querySelector(".CloseButton");
   const nav = document.getElementById("NavigationBar");
@@ -96,7 +187,7 @@ function closeMenu() {
 
 }
 
- /* ------------------------------Suche Karten-------------------------------------------- */
+/* ------------------------------Suche Karten-------------------------------------------- */
 // Aufsetzen Funktion, die auf losgelassene Taste reagiert
 document.addEventListener("DOMContentLoaded", function () {
   const searchInputElement = document.getElementById("search");
@@ -124,7 +215,7 @@ function filterList() {
   })
 }
 
- /* ------------------------------Slider Homepage-------------------------------------------- */
+/* ------------------------------Slider Homepage-------------------------------------------- */
 // Slider Logik wird nur ausgeführt, wenn index.html Seite geöffnet ist
 if (document.body.getAttribute("data-page") === "index") {
   let slideIndex = 1; // Erstes Bild wird auf Slider angezeigt
@@ -159,23 +250,3 @@ if (document.body.getAttribute("data-page") === "index") {
     dots[slideIndex - 1].className += " active";
   }
 }
-
-
-
-
- /* ------------------------------Einstellungs Menu-------------------------------------------- */
-// Öffne Einstellungsmenü bei Klick auf Button
-const SettingsMenu = document.getElementById("SettingsMenu");
-const SettingsButton = document.getElementById("Settings");
-document.getElementById("Settings").addEventListener("click", function () {
-  SettingsMenu.classList.toggle("visible");
-});
-
-// Schließt das Menü, wenn man außerhalb klickt
-document.addEventListener("click", function (event) {
-  if (!SettingsButton.contains(event.target) && !SettingsMenu.contains(event.target)) {
-    SettingsMenu.classList.remove("visible");
-  }
-});
-
-

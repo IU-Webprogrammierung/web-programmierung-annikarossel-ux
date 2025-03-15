@@ -28,10 +28,11 @@
                 </button>
                 <div id="SettingsMenu" class="HideMenu">
                     <div class="SwitchPosition">
-                        <label for="switch" data-i18n="DarkMode"></label>
-                        <label class="switch">
+                        <label for="Switch" data-i18n="DarkMode"></label>
+                        <label id="Switch" class="switch">
                             <input type="checkbox" id="DarkModeToggle">
-                            <span class="Slider"></span>
+                            <span class="Slider" aria-hidden="true"></span>
+                            <span class="ScreenReaderLabel" id="LabelDarkMode" data-i18n="darkMode.off"></span>
                         </label>
                     </div>
                     <div class="SettingsPosition">
@@ -47,7 +48,7 @@
         </header>
         <div class="Container">
             <div class="FAQSection">
-                <h2 data-i18n="FAQText"></h2>
+                <h1 data-i18n="FAQText"></h1>
                 <h3 data-i18n="ReiseplanungTips"></h3>
                 <details>
                     <summary data-i18n="Frage1"></summary>
@@ -111,12 +112,12 @@
                     <form class="QuestionForm" action="">
                         <h2 data-i18n="Frage"></h2>
                         <div class="InputSection">
-                            <label id="Vorname" for="name" data-i18n="Vorname"></label>
-                            <input type="text" name="firstname" aria-labelledby="Vorname">
+                            <label for="name" data-i18n="Vorname"></label>
+                            <input id="name" type="text" name="name" aria-labelledby="name">
                         </div>
                         <div class="InputSection">
-                            <label id="email" for="email" data-i18n="Email"></label>
-                            <input type="text" name="email" aria-labelledby="email">
+                            <label for="email" data-i18n="Email"></label>
+                            <input id="email" type="text" name="email" aria-labelledby="email">
                         </div>
 
                         <div class="InputSection">
@@ -128,9 +129,9 @@
                         </div>
                         <div class="InputSection">
                             <label id="Nachricht" for="message" data-i18n="Nachricht"></label>
-                            <textarea class="MessageBox" id="message" name="message" aria-labelledby="Nachricht"></textarea>
+                            <textarea id="message" class="MessageBox" name="message" aria-labelledby="Nachricht"></textarea>
                         </div>
-                        <input type="submit" data-i18n="submit" value="Abschicken"/>
+                        <input id="SubmitButton" type="submit" data-i18n="submit"/>
 
                     </form>
                 </div>

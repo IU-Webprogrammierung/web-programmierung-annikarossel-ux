@@ -28,10 +28,11 @@
                 </button>
                 <div id="SettingsMenu" class="HideMenu">
                     <div class="SwitchPosition">
-                        <label for="switch" data-i18n="DarkMode"></label>
-                        <label class="switch">
+                        <label for="Switch" data-i18n="DarkMode"></label>
+                        <label id="Switch" class="switch">
                             <input type="checkbox" id="DarkModeToggle">
-                            <span class="Slider"></span>
+                            <span class="Slider" aria-hidden="true"></span>
+                            <span class="ScreenReaderLabel" id="LabelDarkMode" data-i18n="darkMode.off"></span>
                         </label>
                     </div>
                     <div class="SettingsPosition">
@@ -45,8 +46,11 @@
             </div>
 
         </header>
-
-        <input class="search" type="text" id="search" placeholder="Suche nach Land...">
+        <h1 data-i18n="Reiseziele"></h1>
+        <div>
+            <label id="SearchField" for="search" data-i18n="Search" class="ScreenReaderLabel"></label>
+            <input class="search" type="text" id="search" aria-labelledby="SearchField">
+        </div>
 
         <div class="card-container">
             <a class="card" href="" aria-label="Gehe zu Costa Rica-Detailseite">

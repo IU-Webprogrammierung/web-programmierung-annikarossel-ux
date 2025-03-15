@@ -1,9 +1,11 @@
- /* Allgemeine Control Anweisungen */
+ /* -----------------------Allgemeine Control Anweisungen---------------------------------- */
  input {
     width: 100%;
 }
 
-/* Kontaktformular*/
+
+/* -------------------------------Kontakformular------------------------------------------- */
+/* Formular*/
  .QuestionForm {
      display: flex; /* Flexbox */
      flex-direction: column; /* Vertikale Anordnung */
@@ -13,6 +15,10 @@
      background-color: #62956e95;
  }
 
+ .QuestionForm.dark-mode {
+    background-color: #197531;
+}
+
 /* Einzelne Label/Input Paare in Kontaktformular*/
  .InputSection {
      display: flex;
@@ -20,14 +26,17 @@
      gap: 1rem;
  }
 
-  /* Eingabefelder Kontaktformular */
+/* Eingabefelder */
 .MessageBox,
 .QuestionSelect {
     border-radius: 25px;
     padding: 15px;
 }
 
-/* Ausklappbare Fragen/Antworten */
+
+
+/* -------------------------------FAQ Section------------------------------------------- */
+/* Ausklappbare Fragen */
  details {
      border: 1px solid #62956e95;
      border-radius: 5px;
@@ -35,12 +44,21 @@
      margin-bottom: 1rem;
  }
 
-/* Ausgeklappte Fragen/Antworten */
+/* Ausgeklappte Antworten */
  details[open] {
      background-color: #7ab98995;
  }
 
-/* Linksammlung */
+ details.dark-mode {
+    border: 1px solid #467f60;
+}
+
+/* Ausgeklappte Antworten */
+details[open].dark-mode {
+    background-color: #467f60;
+}
+
+/* -------------------------------Linksammlung------------------------------------------- */
 .LinkItem {
     background-color: #e1cfe9;
     padding: 1rem;
@@ -53,7 +71,11 @@
     hyphens: auto; /* Silbentrennung */
 }
 
+.LinkItem.dark-mode {
+    background-color: #8100b8;
+}
 
+/* -------------------------------Responsive Anpassungen------------------------------------------- */
 /* Mobile */
  @media screen and (max-width: 786px) {
     .Container {

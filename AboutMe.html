@@ -29,10 +29,11 @@
                 </button>
                 <div id="SettingsMenu" class="HideMenu">
                     <div class="SwitchPosition">
-                        <label for="switch" data-i18n="DarkMode"></label>
-                        <label class="switch">
+                        <label for="Switch" data-i18n="DarkMode"></label>
+                        <label id="Switch" class="switch">
                             <input type="checkbox" id="DarkModeToggle">
-                            <span class="Slider"></span>
+                            <span class="Slider" aria-hidden="true"></span>
+                            <span class="ScreenReaderLabel" id="LabelDarkMode" data-i18n="darkMode.off"></span>
                         </label>
                     </div>
                     <div class="SettingsPosition">
@@ -49,7 +50,7 @@
 
         <div class="IntroductionContent">
             <div class="AboutMeInformation">
-                <h2 data-i18n="WillkommenText"></h2>
+                <h1 data-i18n="WillkommenText"></h1>
                 <div class="IntroCard">
                     <img class="ImageCard" src="Images/Profile.jpeg" alt="Profilbild">
                     <div>

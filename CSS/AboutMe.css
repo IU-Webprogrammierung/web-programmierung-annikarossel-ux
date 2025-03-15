@@ -1,3 +1,4 @@
+/* -------------------------------Social Media Links------------------------------------------- */
  .SocialMediaLink {
      border: 3px solid #8321ad;
      background-color: #e1cfe9;
@@ -11,11 +12,21 @@
      margin-bottom: 0.5rem;
  }
 
+ .SocialMediaLink.dark-mode {
+    border: 3px solid #8321ad;
+    background-color: #8100b8;
+}
+
+/* -------------------------------Aktuelles------------------------------------------- */
  .CurrentLocation {
      border-radius: 10px;
      padding: 0 1rem 1rem 1rem;
      background-color: #c5e0cc95;
  }
+
+ .CurrentLocation.dark-mode  {
+    background-color: #197531;
+}
 
  .EmbeddedMap {
      width: 100%;
@@ -26,16 +37,15 @@
      height: 30px;
  }
 
-
  meter::-webkit-meter-bar {
      background-color: white;
  }
 
+/* -------------------------------About Me------------------------------------------- */
 .AboutMeInformation {
     display: grid;
     gap: 1rem;
  }
-
 
  .ImageCard {
     width: 15rem;
@@ -59,9 +69,15 @@
     background-color:#ebe0ef;
   }
 
+  .IntroCardSpecial.dark-mode {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    padding: 1rem;
+    background-color:#8321ad;
+  }
 
-
-
+/* -------------------------------Responsive Settings------------------------------------------- */
  /* Mobile */
  @media screen and (max-width: 786px) {
     .SocialMediaLink {

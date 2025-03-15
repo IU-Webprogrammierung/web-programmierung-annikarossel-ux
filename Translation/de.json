@@ -11,7 +11,7 @@
     "ÜberMichNavigation": "Über mich &#8594;",
     "WillkommenText": "Willkommen auf meiner Reise!",
     "ÜberMichBeschreibung": "Ich bin Annika, User Experience Designerin in einer Softwarefirma und Studentin - und dennoch ständig unterwegs. Ob exotische Abenteuer in ferne Länder oder Kurztrips am Wochenende, ich bin bei jeder Reise dabei. Ich zeige euch wie es möglich ist die Welt zu entdecken ohne Vollzeitreisende sein zu müssen.",
-    "NewsLink1":"&#x1F305; NamibiaReiseupdate",
+    "NewsLink1":"&#x1F305; Namibia Reiseupdate",
     "NewsLink2":"&#x1F4CB; Spezielle Packlisten",
     "NewsLink3":"&#x1F4F1; Update Social Media",
     "NewsLink4":"&#x2049; Neuer FAQ Bereich",
@@ -66,12 +66,12 @@
     "SicherheitGesundheit":"Sicherheit &amp; Gesundheit",
     "EssenKultur":"Essen &amp; Kultur",
     "Frage":"Hast du eine Frage?",
-    "Vorname":"Vorname:",
-    "Email":"Email:",
+    "Vorname":"Vorname",
+    "Email":"Email",
     "Veröffentlichung":"Darf ich deine Frage veröffentlichen?",
     "FrageOption1":"Ja",
     "FrageOption2":"Nein",
-    "Nachricht":"Nachricht:",
+    "Nachricht":"Nachricht",
     "LinkCollection1":"&#x1F3E2; Auswärtiges Amt",
     "LinkCollection2":"&#x2708; Flugsuche",
     "LinkCollection3":"&#x1F3E8; Unterkunftssuche",
@@ -157,5 +157,10 @@
     "LandBeschreibung12":"Spanien habe ich bisher nur im Rahmen eines Städtetrips nach Barcelona kennengelernt - welche zu meinen Top 3 Städten der Welt gehört.",
     "LandBeschreibung13":"Thailand ist kein geheimer Reisetip und sehr touristisch aufgeschlossen. Hier findet man sich einfach zurecht und wird belohnt mit tollen Stränden.",
     "LinkCollection":"Link Sammlung",
-    "submit":"Abschicken"
+    "submit":"Abschicken",
+    "darkMode": {
+        "on": "Dark Mode aktiviert",
+        "off": "Dark Mode deaktiviert"
+    },
+    "Search":"Suche nach Land"
 }
