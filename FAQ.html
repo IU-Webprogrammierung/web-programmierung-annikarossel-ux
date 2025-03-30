@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/FAQ.css">
     <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.3/i18next.min.js"></script>
+    <script src="JavaScript/Navigation.js" defer></script>
+    <script src="JavaScript/SettingsMenu.js" defer></script>
 </head>
 
 <body class="body">
@@ -20,6 +22,7 @@
                 <a class="NavItem" href="Packlisten.html" aria-label="Gehe zu Packliste-Seite" data-i18n="Packlisten"></a>
                 <a class="NavItem current" href="FAQ.html" aria-label="Gehe zu FAQ-Seite" data-i18n="FAQ"></a>
                 <a href="javascript:void(0);" class="icon" onclick="createResponsiveNavigation()">&#9776;</a>
+                <span class="CloseButton" onclick="closeMenu()">&#10005;</span>
             </nav>
 
             <div class="SettingsContainer">
@@ -148,7 +151,6 @@
             </div>
         </div>
     </div>
-    <script src="javascript.js"></script>
 </body>
 <footer>
 </footer>
