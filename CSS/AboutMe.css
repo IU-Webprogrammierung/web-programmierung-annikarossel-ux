@@ -18,6 +18,27 @@
 }
 
 /* -------------------------------Aktuelles------------------------------------------- */
+
+.LatestNews {
+    animation-name: AnimationText;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;  
+    opacity: 0;
+    transform: translateY(20px); 
+}
+
+@keyframes AnimationText {
+	60% {
+		transform: translateY(10px) rotate(5deg); 
+        opacity: 0.7;
+	}
+
+	100% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+	}
+}
+
  .CurrentLocation {
      border-radius: 10px;
      padding: 0 1rem 1rem 1rem;
@@ -42,6 +63,7 @@
  }
 
 /* -------------------------------About Me------------------------------------------- */
+
 .AboutMeInformation {
     display: grid;
     gap: 1rem;

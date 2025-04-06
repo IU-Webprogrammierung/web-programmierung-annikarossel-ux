@@ -108,13 +108,28 @@
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   background-color: rgba(255, 255, 255, 0.766);
    padding: 2rem;
    border-radius: 10px;
+   animation-name: changeBackgroundColor;
+   animation-duration: 4s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   animation-timing-function: ease-in-out;
  }
 
+ @keyframes changeBackgroundColor {
+  from {background-color: #7ab989;}
+  to {background-color: #e1cfe9;}
+}
+
+@keyframes changeBackgroundColorDarkMode {
+  from {background-color: #274b37;}
+  to {background-color: #8100b8;}
+}
+
  .HeroImageContainer h3.dark-mode {
-  color: black;
+  color: white;
+  animation-name: changeBackgroundColorDarkMode;
 }
  @media screen and (max-width: 786px) {
    .HeroImageContainer h3 {
@@ -141,6 +156,12 @@
    margin-top: 1rem;
    overflow-wrap: break-word; /* Automatisches Umbrechen von zu langen Wörtern */
    hyphens: auto; /* Silbentrennung */
+   transition: all 0.3s ease-in-out;
+ }
+
+ .NewsLink:hover {
+  background-color: #8100b8;
+  color: white;
  }
 
  .NewsLink.dark-mode {
@@ -268,6 +289,20 @@
    border-radius: 10px;
    padding: 0.25rem 1rem 0.25rem 1rem;
    margin-bottom: 1rem;
+   transition: transform 0.3s ease;
+   animation: AnimationListItem;
+   animation-duration: 4s;
+   animation-iteration-count: infinite;  
+   animation-direction: alternate;
+ }
+
+ @keyframes AnimationListItem {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
  }
 
  .PackingSection li.dark-mode {
